@@ -12,7 +12,7 @@ load_dotenv(BASE_DIR / ".env")
 ENV_FILE = BASE_DIR / ".env"
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
-OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://ccproxy.yukework.com/openproxy/rp/v1/")
+OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://llm.baifentan.com/openproxy/rp/v1/")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.3-chat-latest")
 
 # Runtime config (updated via settings API)
