@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 图书自动化</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="home">
+    <header>
+      <p class="eyebrow">AI BOOK AUTOMATION</p>
+      <h1>AI 图书自动化</h1>
+      <p class="subtitle">从脚本分析到视频生成，一站式 AI 自动化工作流</p>
+    </header>
+
+    <main>
+      <div class="cards">
+        <a href="/script/" class="card">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h2>脚本分析</h2>
+          <p class="card-desc">上传视频或粘贴文案，AI 自动拆解脚本结构、提取台词、识别视觉元素，生成可复用模板。</p>
+          <span class="card-step">Step 1</span>
+        </a>
+
+        <a href="/prompt/" class="card">
+          <div class="card-icon accent">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h2>提示词生成</h2>
+          <p class="card-desc">基于脚本分析结果，结合产品信息，AI 生成多版本脚本及视频拍摄提示词（即梦 / 可灵格式）。</p>
+          <span class="card-step">Step 2</span>
+        </a>
+
+        <a href="/video/" class="card">
+          <div class="card-icon green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"/>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <h2>视频生成</h2>
+          <p class="card-desc">选择脚本分段与提示词，提交 Seedance 异步视频生成任务，支持多模型、批量生成与下载。</p>
+          <span class="card-step">Step 3</span>
+        </a>
+      </div>
+
+      <div class="flow">
+        <span>脚本分析</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>提示词生成</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>视频生成</span>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
