@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+storage/batches/*.json
+storage/jobs/*.json
+storage/videos/*
+!storage/batches/.gitkeep
+!storage/jobs/.gitkeep
+!storage/videos/.gitkeep

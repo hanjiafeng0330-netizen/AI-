@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>脚本分析工作台</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>脚本分析工作台</h1>
+    <p class="subtitle">上传视频或粘贴文字脚本，自动拆解结构 / 提取台词 / 分析视觉元素 / 生成可复用模板</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="video">上传视频</button>
+    <button class="tab-btn" data-tab="text">粘贴文字</button>
+    <button class="tab-btn" data-tab="history">历史记录</button>
+  </nav>
+
+  <section class="tab-panel active" id="panel-video">
+    <form id="video-form">
+      <label class="field">
+        <span>视频文件</span>
+        <input type="file" id="video-file" accept="video/*" required />
+      </label>
+      <label class="field">
+        <span>抽样间隔（秒）</span>
+        <input type="number" id="frame-interval" value="2" min="0.5" step="0.5" />
+      </label>
+      <button type="submit" class="btn-primary">开始分析</button>
+    </form>
+    <div id="video-progress" class="progress hidden">
+      <div class="spinner"></div>
+      <span id="video-progress-text">处理中…</span>
+    </div>
+    <div id="video-error" class="error hidden"></div>
+  </section>
+
+  <section class="tab-panel" id="panel-text">
+    <form id="text-form">
+      <label class="field">
+        <span>脚本文本</span>
+        <textarea id="script-text" rows="10" placeholder="粘贴口播稿/脚本文字…" required></textarea>
+      </label>
+      <button type="submit" class="btn-primary">开始分析</button>
+    </form>
+    <div id="text-progress" class="progress hidden">
+      <div class="spinner"></div>
+      <span>分析中…</span>
+    </div>
+    <div id="text-error" class="error hidden"></div>
+  </section>
+
+  <section class="tab-panel" id="panel-history">
+    <div id="history-list"></div>
+  </section>
+
+  <div id="history-video-player" class="hidden"></div>
+
+  <section id="result" class="result hidden">
+    <nav class="result-tabs">
+      <button class="result-tab-btn active" data-result-tab="structure">结构拆解</button>
+      <button class="result-tab-btn" data-result-tab="dialogue">文案台词</button>
+      <button class="result-tab-btn" data-result-tab="visual">视觉元素</button>
+      <button class="result-tab-btn" data-result-tab="template">可复用模板</button>
+      <button class="result-tab-btn" data-result-tab="prompts">Prompt 记录</button>
+    </nav>
+
+    <div class="result-panel active" id="result-structure"></div>
+    <div class="result-panel" id="result-dialogue"></div>
+    <div class="result-panel" id="result-visual"></div>
+    <div class="result-panel" id="result-template">
+      <button id="copy-template" class="btn-secondary">复制 JSON</button>
+      <pre id="template-json"></pre>
+    </div>
+    <div class="result-panel" id="result-prompts"></div>
+  </section>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

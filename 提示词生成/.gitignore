@@ -1,0 +1,6 @@
+.env
+storage/results/
+storage/history/
+__pycache__/
+*.pyc
+.DS_Store
