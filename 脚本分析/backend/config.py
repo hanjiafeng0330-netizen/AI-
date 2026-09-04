@@ -12,8 +12,8 @@ load_dotenv(BASE_DIR / ".env")
 ENV_FILE = BASE_DIR / ".env"
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
-OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://ccproxy.yukework.com/v1")
-OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.6-sol")
+OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://openproxy-cn.yukework.com/openproxy/rp/v1/")
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.3-chat-latest")
 WHISPER_MODEL_SIZE = os.environ.get("WHISPER_MODEL_SIZE", "small")
 
 # Runtime config (updated via settings API)
@@ -23,11 +23,14 @@ _runtime_model = OPENAI_MODEL
 _config_lock = threading.Lock()
 
 AVAILABLE_MODELS = [
-    {"id": "gpt-5.6-sol", "label": "GPT-5.6 Sol"},
+    {"id": "gpt-5.3-chat-latest", "label": "GPT-5.3 Chat (最新)"},
+    {"id": "gpt-5.2-chat-latest", "label": "GPT-5.2 Chat"},
+    {"id": "gpt-5.1-chat-latest", "label": "GPT-5.1 Chat"},
     {"id": "gpt-4o", "label": "GPT-4o"},
-    {"id": "gpt-4o-mini", "label": "GPT-4o Mini"},
-    {"id": "claude-sonnet-4-6", "label": "Claude Sonnet 4.6"},
-    {"id": "deepseek-chat", "label": "DeepSeek Chat"},
+    {"id": "gpt-4.1", "label": "GPT-4.1"},
+    {"id": "gpt-4.1-mini", "label": "GPT-4.1 Mini"},
+    {"id": "o3", "label": "O3 (深度思考)"},
+    {"id": "o4-mini", "label": "O4 Mini (深度思考)"},
 ]
 
 

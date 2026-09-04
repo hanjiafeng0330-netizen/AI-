@@ -647,7 +647,7 @@ async function apiRequest(url, options) {
 }
 
 async function loadSettingsStatus() {
-  const status = await apiRequest('api/settings/anthropic');
+  const status = await apiRequest('api/settings/openai');
   const target = $('#key-status');
   target.textContent = status.configured
     ? `已配置：模型 ${status.model}`
@@ -677,7 +677,7 @@ async function saveSettings(event) {
   const model = $('#model-select').value;
   const baseUrl = $('#base-url').value;
   try {
-    await apiRequest('api/settings/anthropic', {
+    await apiRequest('api/settings/openai', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ api_key: apiKey, model, base_url: baseUrl }),

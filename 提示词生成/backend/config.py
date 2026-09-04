@@ -11,32 +11,37 @@ load_dotenv(BASE_DIR / ".env")
 
 ENV_FILE = BASE_DIR / ".env"
 
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-ANTHROPIC_BASE_URL = os.environ.get("ANTHROPIC_BASE_URL", "https://ccproxy.yukework.com")
-CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://openproxy-cn.yukework.com/openproxy/rp/v1/")
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.3-chat-latest")
 
 # Runtime config (updated via settings API)
-_runtime_api_key = ANTHROPIC_API_KEY
-_runtime_base_url = ANTHROPIC_BASE_URL
-_runtime_model = CLAUDE_MODEL
+_runtime_api_key = OPENAI_API_KEY
+_runtime_base_url = OPENAI_BASE_URL
+_runtime_model = OPENAI_MODEL
 _config_lock = threading.Lock()
 
 AVAILABLE_MODELS = [
-    {"id": "claude-sonnet-4-6", "label": "Claude Sonnet 4.6"},
-    {"id": "claude-opus-4-7", "label": "Claude Opus 4.7"},
-    {"id": "claude-haiku-4-5-20251001", "label": "Claude Haiku 4.5"},
+    {"id": "gpt-5.3-chat-latest", "label": "GPT-5.3 Chat (最新)"},
+    {"id": "gpt-5.2-chat-latest", "label": "GPT-5.2 Chat"},
+    {"id": "gpt-5.1-chat-latest", "label": "GPT-5.1 Chat"},
+    {"id": "gpt-4o", "label": "GPT-4o"},
+    {"id": "gpt-4.1", "label": "GPT-4.1"},
+    {"id": "gpt-4.1-mini", "label": "GPT-4.1 Mini"},
+    {"id": "o3", "label": "O3 (深度思考)"},
+    {"id": "o4-mini", "label": "O4 Mini (深度思考)"},
 ]
 
 
-def get_anthropic_api_key() -> str:
+def get_openai_api_key() -> str:
     return _runtime_api_key
 
 
-def get_anthropic_base_url() -> str:
+def get_openai_base_url() -> str:
     return _runtime_base_url
 
 
-def get_claude_model() -> str:
+def get_openai_model() -> str:
     return _runtime_model
 
 
@@ -65,7 +70,7 @@ def _save_env_line(existing: str, key: str, value: str) -> str:
     return "".join(filtered)
 
 
-def save_anthropic_settings(api_key: str, model: str, base_url: str) -> None:
+def save_openai_settings(api_key: str, model: str, base_url: str) -> None:
     global _runtime_api_key, _runtime_base_url, _runtime_model
     key = _validate_api_key(api_key)
     target = ENV_FILE
@@ -74,9 +79,9 @@ def save_anthropic_settings(api_key: str, model: str, base_url: str) -> None:
     with _config_lock:
         try:
             existing = target.read_text(encoding="utf-8") if target.exists() else ""
-            updated = _save_env_line(existing, "ANTHROPIC_API_KEY", key)
-            updated = _save_env_line(updated, "ANTHROPIC_BASE_URL", base_url)
-            updated = _save_env_line(updated, "CLAUDE_MODEL", model)
+            updated = _save_env_line(existing, "OPENAI_API_KEY", key)
+            updated = _save_env_line(updated, "OPENAI_BASE_URL", base_url)
+            updated = _save_env_line(updated, "OPENAI_MODEL", model)
             descriptor, temporary_name = tempfile.mkstemp(prefix=f".{target.name}.", dir=target.parent)
             try:
                 with os.fdopen(descriptor, "w", encoding="utf-8") as file:

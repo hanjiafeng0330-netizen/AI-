@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import history, products, source_scripts
-from .config import AVAILABLE_MODELS, BASE_DIR, RESULTS_DIR, get_claude_model, is_configured, save_anthropic_settings
+from .config import AVAILABLE_MODELS, BASE_DIR, RESULTS_DIR, get_openai_model, is_configured, save_openai_settings
 from .generator import generate_scripts, render_plain_script
 from .models import (
     AnalysisResult,
@@ -49,19 +49,19 @@ class AnthropicSettingsStatus(BaseModel):
     base_url: str
 
 
-@app.get("/api/settings/anthropic", response_model=AnthropicSettingsStatus)
-def api_anthropic_settings_status():
+@app.get("/api/settings/openai", response_model=AnthropicSettingsStatus)
+def api_openai_settings_status():
     return AnthropicSettingsStatus(
         configured=is_configured(),
-        model=get_claude_model(),
+        model=get_openai_model(),
         base_url="",
     )
 
 
-@app.put("/api/settings/anthropic", response_model=AnthropicSettingsStatus)
-def api_save_anthropic_settings(request: AnthropicSettingsRequest):
+@app.put("/api/settings/openai", response_model=AnthropicSettingsStatus)
+def api_save_openai_settings(request: AnthropicSettingsRequest):
     try:
-        save_anthropic_settings(request.api_key, request.model, request.base_url)
+        save_openai_settings(request.api_key, request.model, request.base_url)
     except (ValueError, RuntimeError) as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     return AnthropicSettingsStatus(
@@ -78,7 +78,7 @@ def api_list_models():
 
 @app.get("/api/config")
 def get_config() -> dict:
-    return {"model": get_claude_model()}
+    return {"model": get_openai_model()}
 
 
 @app.get("/api/source-scripts", response_model=list[SourceScriptSummary])

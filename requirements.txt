@@ -5,7 +5,7 @@ httpx
 httpx2
 python-dotenv
 pydantic
-anthropic
+openai
 json-repair
 
 # 脚本分析
