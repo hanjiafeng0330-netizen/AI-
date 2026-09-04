@@ -12,12 +12,16 @@ def _get_whisper_model():
     global _whisper_model
     if _whisper_model is None:
         try:
-            from faster_whisper import WhisperModel
+            import whisper
         except ImportError:
             raise RuntimeError(
-                "语音转写需要 faster-whisper，请安装: pip install faster-whisper av"
+                "语音转写需要 openai-whisper，请安装: pip install openai-whisper"
             )
-        _whisper_model = WhisperModel(WHISPER_MODEL_SIZE, device="cpu", compute_type="int8")
+        # openai-whisper 模型名: tiny/base/small/medium/large
+        model_name = WHISPER_MODEL_SIZE if WHISPER_MODEL_SIZE in (
+            "tiny", "base", "small", "medium", "large"
+        ) else "small"
+        _whisper_model = whisper.load_model(model_name)
     return _whisper_model
 
 
@@ -41,9 +45,9 @@ def extract_audio(video_path: Path, out_path: Path) -> Path:
 
 def transcribe_audio(audio_path: Path) -> list[dict]:
     model = _get_whisper_model()
-    segments, _info = model.transcribe(str(audio_path), vad_filter=True)
+    result = model.transcribe(str(audio_path))
     return [
-        {"start": seg.start, "end": seg.end, "text": seg.text.strip()}
-        for seg in segments
-        if seg.text.strip()
+        {"start": seg["start"], "end": seg["end"], "text": seg["text"].strip()}
+        for seg in result["segments"]
+        if seg["text"].strip()
     ]
