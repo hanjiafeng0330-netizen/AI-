@@ -9,13 +9,15 @@ from fastapi.staticfiles import StaticFiles
 
 from . import history
 from .analyzer import analyze_text_script
-from .config import BASE_DIR, DEFAULT_FRAME_INTERVAL_SEC, RESULTS_DIR, VIDEOS_DIR
+from .config import AVAILABLE_MODELS, BASE_DIR, DEFAULT_FRAME_INTERVAL_SEC, VIDEOS_DIR, get_openai_base_url, get_openai_model, is_configured, save_openai_settings
 from .jobs import create_job, get_job, run_video_pipeline
 from .models import (
     AnalysisResponse,
     HistoryEntry,
     HistorySummary,
     JobStatus,
+    OpenAISettingsRequest,
+    OpenAISettingsStatus,
     TextAnalyzeRequest,
 )
 
@@ -23,6 +25,33 @@ app = FastAPI(title="脚本分析工作台")
 
 RANGE_RE = re.compile(r"bytes=(\d*)-(\d*)")
 STREAM_CHUNK_SIZE = 1024 * 1024
+
+
+@app.get("/api/settings/openai", response_model=OpenAISettingsStatus)
+def api_openai_settings_status():
+    return OpenAISettingsStatus(
+        configured=is_configured(),
+        model=get_openai_model(),
+        base_url=get_openai_base_url(),
+    )
+
+
+@app.put("/api/settings/openai", response_model=OpenAISettingsStatus)
+def api_save_openai_settings(request: OpenAISettingsRequest):
+    try:
+        save_openai_settings(request.api_key, request.model, request.base_url)
+    except (ValueError, RuntimeError) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    return OpenAISettingsStatus(
+        configured=True,
+        model=request.model,
+        base_url=request.base_url,
+    )
+
+
+@app.get("/api/settings/models")
+def api_list_models():
+    return AVAILABLE_MODELS
 
 
 @app.post("/api/analyze/text", response_model=AnalysisResponse)

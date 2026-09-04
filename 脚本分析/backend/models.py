@@ -95,3 +95,15 @@ class HistorySummary(BaseModel):
     created_at: float
     source_type: Literal["video", "text"]
     title: str
+
+
+class OpenAISettingsRequest(BaseModel):
+    api_key: str = Field(min_length=1, max_length=4096)
+    model: str = Field(min_length=1, max_length=128)
+    base_url: str = Field(default="", max_length=512)
+
+
+class OpenAISettingsStatus(BaseModel):
+    configured: bool
+    model: str
+    base_url: str

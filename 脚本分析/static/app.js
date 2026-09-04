@@ -344,3 +344,65 @@ function pollJob(jobId) {
     }, 2000);
   });
 }
+
+// ---- API 设置 ----
+
+async function api(url, options) {
+  const response = await fetch(url, options);
+  if (!response.ok) { const body = await response.json().catch(() => ({})); throw new Error(body.detail || `请求失败（${response.status}）`); }
+  return response.json();
+}
+
+async function loadSettingsStatus() {
+  const status = await api('api/settings/openai');
+  const target = $('#key-status');
+  target.textContent = status.configured
+    ? `已配置：模型 ${status.model}`
+    : '未配置：保存 API Key 和模型后才能使用分析功能。';
+  target.classList.toggle('configured', status.configured);
+  $('#api-key').value = '';
+  $('#base-url').value = status.base_url || '';
+  $('#model-select').value = status.model;
+}
+
+async function loadModels() {
+  const models = await api('api/settings/models');
+  const select = $('#model-select');
+  select.innerHTML = models.map(m => `<option value="${m.id}">${m.label}</option>`).join('');
+}
+
+function closeSettings() {
+  $('#settings-error').textContent = '';
+  $('#settings-panel').classList.add('hidden');
+}
+
+async function saveSettings(event) {
+  event.preventDefault();
+  const errorTarget = $('#settings-error');
+  errorTarget.textContent = '';
+  const apiKey = $('#api-key').value;
+  const model = $('#model-select').value;
+  const baseUrl = $('#base-url').value;
+  try {
+    await api('api/settings/openai', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ api_key: apiKey, model, base_url: baseUrl }),
+    });
+    await loadSettingsStatus();
+    closeSettings();
+  } catch {
+    errorTarget.textContent = '保存失败，请检查输入后重试。';
+  }
+}
+
+const $ = (selector) => document.querySelector(selector);
+
+$('#open-settings').addEventListener('click', async () => {
+  $('#settings-panel').classList.remove('hidden');
+  await loadModels();
+  await loadSettingsStatus();
+});
+$('#close-settings').addEventListener('click', closeSettings);
+$('#cancel-settings').addEventListener('click', closeSettings);
+$('#settings-form').addEventListener('submit', saveSettings);

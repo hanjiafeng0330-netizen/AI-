@@ -9,7 +9,7 @@ import pydantic
 from json_repair import repair_json
 from openai import OpenAI
 
-from .config import OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL, FRAME_BATCH_SIZE
+from .config import get_openai_api_key, get_openai_base_url, get_openai_model, FRAME_BATCH_SIZE
 from .models import AnalysisResult, ModelConfig, PromptMetadata, PromptStep
 
 MAX_SUBMIT_RETRIES = 3
@@ -23,14 +23,14 @@ _client: OpenAI | None = None
 def _get_client() -> OpenAI:
     global _client
     if _client is None:
-        if not OPENAI_API_KEY:
-            raise RuntimeError("未配置 OPENAI_API_KEY")
+        if not get_openai_api_key():
+            raise RuntimeError("未配置 get_openai_api_key()")
         # 代理偶尔 TLS/连接建立较慢，SDK 默认 connect timeout 只有 5s 容易误报超时，这里放宽到 30s。
         # trust_env=False：本机 macOS 系统级代理（127.0.0.1:7890）对该代理域名的 SSL 转发不稳定
         # （curl 不读取系统代理所以不受影响），显式禁用后直连代理，避免 SSL EOF 报错。
         _client = OpenAI(
-            api_key=OPENAI_API_KEY,
-            base_url=OPENAI_BASE_URL,
+            api_key=get_openai_api_key(),
+            base_url=get_openai_base_url(),
             http_client=httpx.Client(
                 trust_env=False,
                 timeout=httpx.Timeout(connect=30.0, read=600.0, write=600.0, pool=600.0),
@@ -191,12 +191,12 @@ def _call_submit_analysis(
     """调用 OpenAI 兼容代理并强制 submit_analysis 函数输出。"""
     client = _get_client()
     final_prompt = _render_final_prompt(user_prompt, variables)
-    model_params = ModelConfig(model=OPENAI_MODEL, temperature=None, max_tokens=max_tokens)
+    model_params = ModelConfig(model=get_openai_model(), temperature=None, max_tokens=max_tokens)
     last_error: Exception | None = None
     for attempt in range(1, MAX_SUBMIT_RETRIES + 1):
         started = time.perf_counter()
         response = client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=get_openai_model(),
             max_completion_tokens=max_tokens,
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -219,7 +219,7 @@ def _call_submit_analysis(
                 final_prompt=final_prompt,
                 model_params=model_params,
                 response=json.dumps(data, ensure_ascii=False, indent=2),
-                metadata=_build_metadata(response, elapsed_ms, OPENAI_MODEL),
+                metadata=_build_metadata(response, elapsed_ms, get_openai_model()),
             )
             return result, step
         except (json.JSONDecodeError, pydantic.ValidationError, RuntimeError) as exc:
@@ -293,7 +293,7 @@ def _describe_frame_batches(
 ) -> tuple[list[str], list[PromptStep]]:
     client = _get_client()
     max_tokens = 1024
-    model_params = ModelConfig(model=OPENAI_MODEL, temperature=None, max_tokens=max_tokens)
+    model_params = ModelConfig(model=get_openai_model(), temperature=None, max_tokens=max_tokens)
     observations: list[str] = []
     steps: list[PromptStep] = []
     for i in range(0, len(frames), FRAME_BATCH_SIZE):
@@ -308,7 +308,7 @@ def _describe_frame_batches(
 
         started = time.perf_counter()
         response = client.chat.completions.create(
-            model=OPENAI_MODEL,
+            model=get_openai_model(),
             max_completion_tokens=max_tokens,
             messages=[
                 {"role": "system", "content": VISION_SYSTEM_PROMPT},
@@ -337,7 +337,7 @@ def _describe_frame_batches(
                 final_prompt=final_prompt_text,
                 model_params=model_params,
                 response=text,
-                metadata=_build_metadata(response, elapsed_ms, OPENAI_MODEL),
+                metadata=_build_metadata(response, elapsed_ms, get_openai_model()),
             )
         )
     return observations, steps
