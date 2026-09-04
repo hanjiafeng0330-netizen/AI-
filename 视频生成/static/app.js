@@ -12,7 +12,7 @@ function formatTime(seconds) { return seconds ? `${seconds} 秒` : '时长未标
 function statusClass(status) { return ['completed','failed','partial_failed','processing','running','queued','downloading'].includes(status) ? status : ''; }
 
 async function loadSettingsStatus() {
-  const status = await api('/api/settings/seedance');
+  const status = await api('api/settings/seedance');
   const target = $('#key-status');
   target.textContent = status.configured ? '已配置：可直接创建视频任务。' : '未配置：保存 API Key 后才能创建远端任务。';
   target.classList.toggle('configured', status.configured);
@@ -20,18 +20,18 @@ async function loadSettingsStatus() {
 function closeSettings() { $('#api-key').value = ''; $('#settings-error').textContent = ''; $('#settings-panel').classList.add('hidden'); }
 async function saveSettings(event) {
   event.preventDefault(); const input = $('#api-key'); const apiKey = input.value; const errorTarget = $('#settings-error'); errorTarget.textContent = '';
-  try { await api('/api/settings/seedance', { method:'PUT', headers:{'Content-Type':'application/json'}, body:JSON.stringify({api_key: apiKey}) }); input.value = ''; await loadSettingsStatus(); closeSettings(); }
+  try { await api('api/settings/seedance', { method:'PUT', headers:{'Content-Type':'application/json'}, body:JSON.stringify({api_key: apiKey}) }); input.value = ''; await loadSettingsStatus(); closeSettings(); }
   catch { input.value = ''; errorTarget.textContent = '保存失败，请检查 API Key 格式后重试。'; }
 }
 
 async function loadSources() {
-  state.sources = await api('/api/sources');
+  state.sources = await api('api/sources');
   const select = $('#source-select');
   select.innerHTML = state.sources.length ? state.sources.map(source => `<option value="${escapeHtml(source.id)}">${escapeHtml(source.title)}（${source.variant_count} 条变体）</option>`).join('') : '<option>未找到提示词生成结果</option>';
   if (state.sources.length) await selectSource();
 }
 async function selectSource() {
-  state.source = await api(`/api/sources/${encodeURIComponent($('#source-select').value)}`);
+  state.source = await api(`api/sources/${encodeURIComponent($('#source-select').value)}`);
   const select = $('#variant-select'); select.disabled = false;
   select.innerHTML = state.source.variants.map((variant, index) => `<option value="${index}">${index + 1}. ${escapeHtml(variant.variant_title)}</option>`).join('');
   await selectVariant();
@@ -74,7 +74,7 @@ function syncModelCapabilities() {
   $('#audio-notice').textContent = capability.audio ? `${capability.label} 可请求原生音频；下载后会检测 MP4 音轨。` : `${capability.label} 不保证原生音频，已关闭音频选项。`;
 }
 async function loadModels() {
-  state.models = await api('/api/models');
+  state.models = await api('api/models');
   const mode = $('#mode').value; const select = $('#model');
   const candidates = state.models.filter(model => model.modes.includes(mode));
   select.disabled = false;
@@ -91,7 +91,7 @@ async function submitBatch() {
   const request = { source_id:state.source.id, variant_index:Number($('#variant-select').value), segments, mode:$('#mode').value, model:$('#model').value, generate_audio:$('#generate-audio').checked, service_tier:$('#service-tier').value || null, duration:Number($('#duration').value), ratio:$('#ratio').value, resolution:$('#resolution').value, quantity };
   if (request.mode === 'image') request.image_url = $('#image-url').value.trim() || null;
   const button = $('#submit'); button.disabled = true; button.textContent = '正在创建…';
-  try { await api('/api/batches', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(request) }); await loadBatches(); }
+  try { await api('api/batches', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(request) }); await loadBatches(); }
   catch (error) { $('#form-error').textContent = error.message; }
   finally { button.textContent = '创建视频任务'; updateSelection(); }
 }
@@ -106,11 +106,11 @@ function renderTask(task, batch) {
   return `<article class="task"><div class="task-top"><div><strong>第 ${task.segment_index + 1} 段 · ${escapeHtml(task.role)} · 变体 ${task.variation_index}</strong><p><b>请求：</b>${escapeHtml(task.requested_duration)} 秒 · ${escapeHtml(task.ratio)} · ${escapeHtml(task.resolution)} · ${escapeHtml(task.model)} · ${task.generate_audio ? '请求音频' : '未请求音频'}</p><p><b>实测：</b>${escapeHtml(actual)}</p></div><span class="status ${statusClass(task.status)}">${statusText[task.status] || escapeHtml(task.status)}</span></div><div class="progress-line"><div class="progress-bar"><span style="width:${task.progress || 0}%"></span></div><strong>${task.progress || 0}%</strong><small>${escapeHtml(task.progress_label || '处理中')}</small></div><p>Provider：${escapeHtml(task.provider_status || '待提交')} · 轮询 ${task.poll_attempts || 0} 次 · <code>${escapeHtml(task.provider_task_id || task.job_id)}</code></p><p>音频：${audioText(task)}</p>${task.error_code ? `<p class="error">错误码：${escapeHtml(task.error_code)}${task.error_message ? ` · ${escapeHtml(task.error_message)}` : ''}</p>` : ''}${task.error_message && !task.error_code ? `<p class="error">${escapeHtml(task.error_message)}</p>` : ''}${task.download_error ? `<p class="warning">${escapeHtml(task.download_error)}</p>` : ''}<div class="task-actions">${cancel}${retry}${remote}${media}</div></article>`;
 }
 async function loadBatches() {
-  const batches = await api('/api/batches'); state.batches = await Promise.all(batches.map(batch => api(`/api/batches/${encodeURIComponent(batch.batch_id)}`)));
+  const batches = await api('api/batches'); state.batches = await Promise.all(batches.map(batch => api(`api/batches/${encodeURIComponent(batch.batch_id)}`)));
   const container = $('#batches');
   container.innerHTML = state.batches.length ? state.batches.map(batch => `<article class="batch"><div class="batch-header"><div><h3>${escapeHtml(batch.source_title)}</h3><p class="batch-meta">${escapeHtml(batch.variant_title)} · ${batch.completed_items}/${batch.total_items} 完成 · ${batch.failed_items} 失败 · ${new Date(batch.created_at * 1000).toLocaleString()}</p><div class="progress-bar batch-progress"><span style="width:${batch.progress}%"></span></div></div><span class="status ${statusClass(batch.status)}">${statusText[batch.status] || escapeHtml(batch.status)} ${batch.progress}%</span></div>${batch.items.map(item => renderTask(item,batch)).join('')}</article>`).join('') : '<p class="hint">尚无视频任务。选择分段后即可开始。</p>';
-  container.querySelectorAll('[data-cancel]').forEach(button => button.addEventListener('click', async () => { await api(`/api/batches/${button.dataset.batch}/items/${button.dataset.cancel}`, {method:'DELETE'}); await loadBatches(); }));
-  container.querySelectorAll('[data-retry]').forEach(button => button.addEventListener('click', async () => { await api(`/api/batches/${button.dataset.batch}/items/${button.dataset.retry}/retry-download`, {method:'POST'}); await loadBatches(); }));
+  container.querySelectorAll('[data-cancel]').forEach(button => button.addEventListener('click', async () => { await api(`api/batches/${button.dataset.batch}/items/${button.dataset.cancel}`, {method:'DELETE'}); await loadBatches(); }));
+  container.querySelectorAll('[data-retry]').forEach(button => button.addEventListener('click', async () => { await api(`api/batches/${button.dataset.batch}/items/${button.dataset.retry}/retry-download`, {method:'POST'}); await loadBatches(); }));
 }
 $('#source-select').addEventListener('change', selectSource); $('#variant-select').addEventListener('change', selectVariant); $('#mode').addEventListener('change', syncMode); $('#model').addEventListener('change', syncModelCapabilities); $('#quantity').addEventListener('change', updateSelection); $('#submit').addEventListener('click', submitBatch); $('#refresh-batches').addEventListener('click', loadBatches);
 $('#open-settings').addEventListener('click', async () => { $('#settings-panel').classList.remove('hidden'); try { await loadSettingsStatus(); } catch { $('#key-status').textContent = '无法读取配置状态。'; } }); $('#close-settings').addEventListener('click', closeSettings); $('#cancel-settings').addEventListener('click', closeSettings); $('#settings-form').addEventListener('submit', saveSettings);

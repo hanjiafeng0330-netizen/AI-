@@ -172,7 +172,7 @@ function renderScriptStatusBar() {
 
 async function setScriptStatus(status) {
   if (!currentResult.id) return;
-  const resp = await fetch(`/api/history/${currentResult.id}/scripts/${currentScriptIndex}/status`, {
+  const resp = await fetch(`api/history/${currentResult.id}/scripts/${currentScriptIndex}/status`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ status }),
@@ -253,7 +253,7 @@ function renderVideoPrompts(elId, promptField, script, scriptIndex) {
     btn.addEventListener("click", async () => {
       const text = document.getElementById(btn.dataset.editTarget).value;
       if (!currentResult.id) return;
-      const resp = await fetch(`/api/history/${currentResult.id}/scripts/${currentScriptIndex}/edit`, {
+      const resp = await fetch(`api/history/${currentResult.id}/scripts/${currentScriptIndex}/edit`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ video_prompts: { [btn.dataset.segIndex]: { [btn.dataset.field]: text } } }),
@@ -290,7 +290,7 @@ document.getElementById("cancel-plain-btn").addEventListener("click", renderPlai
 document.getElementById("save-plain-btn").addEventListener("click", async () => {
   const text = document.getElementById("plain-script-edit").value;
   if (!currentResult.id) return;
-  const resp = await fetch(`/api/history/${currentResult.id}/scripts/${currentScriptIndex}/edit`, {
+  const resp = await fetch(`api/history/${currentResult.id}/scripts/${currentScriptIndex}/edit`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ plain_script: text }),
@@ -347,7 +347,7 @@ async function loadSourceScripts() {
   const select = document.getElementById("source-select");
   select.innerHTML = "<option>加载中…</option>";
   try {
-    const resp = await fetch("/api/source-scripts");
+    const resp = await fetch("api/source-scripts");
     const scripts = await resp.json();
     if (scripts.length === 0) {
       select.innerHTML = '<option value="">暂无可用分析结果，请先去「脚本分析」工作台生成</option>';
@@ -368,7 +368,7 @@ async function loadProductOptions() {
   const select = document.getElementById("product-select");
   select.innerHTML = "<option>加载中…</option>";
   try {
-    const resp = await fetch("/api/products");
+    const resp = await fetch("api/products");
     const items = await resp.json();
     if (items.length === 0) {
       select.innerHTML = '<option value="">暂无产品，请先去「产品库」创建</option>';
@@ -406,7 +406,7 @@ generateForm.addEventListener("submit", async (e) => {
   document.getElementById("generate-progress-text").textContent = `生成中（一次产出 ${scriptCount} 条创意脚本，可能需要1分钟左右）…`;
   generateProgress.classList.remove("hidden");
   try {
-    const resp = await fetch("/api/generate", {
+    const resp = await fetch("api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -469,7 +469,7 @@ productForm.addEventListener("submit", async (e) => {
     extra_notes: document.getElementById("product-extra-notes").value.trim() || null,
   };
   try {
-    const resp = await fetch(id ? `/api/products/${id}` : "/api/products", {
+    const resp = await fetch(id ? `api/products/${id}` : "api/products", {
       method: id ? "PUT" : "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -505,7 +505,7 @@ function fillProductForm(p) {
 
 async function deleteProduct(id) {
   if (!confirm("确定删除这个产品吗？")) return;
-  await fetch(`/api/products/${id}`, { method: "DELETE" });
+  await fetch(`api/products/${id}`, { method: "DELETE" });
   await loadProducts();
   await loadProductOptions();
 }
@@ -514,7 +514,7 @@ async function loadProducts(grade) {
   const listEl = document.getElementById("product-list");
   listEl.innerHTML = "<p>加载中…</p>";
   try {
-    const url = grade ? `/api/products?grade=${encodeURIComponent(grade)}` : "/api/products";
+    const url = grade ? `api/products?grade=${encodeURIComponent(grade)}` : "api/products";
     const resp = await fetch(url);
     const items = await resp.json();
     if (items.length === 0) {
@@ -587,7 +587,7 @@ async function loadHistory() {
   const listEl = document.getElementById("history-list");
   listEl.innerHTML = "<p>加载中…</p>";
   try {
-    const resp = await fetch("/api/history");
+    const resp = await fetch("api/history");
     const entries = await resp.json();
     if (entries.length === 0) {
       listEl.innerHTML = "<p>暂无脚本记录</p>";
@@ -630,7 +630,7 @@ async function loadHistory() {
 }
 
 async function openHistoryEntry(entryId) {
-  const resp = await fetch(`/api/history/${entryId}`);
+  const resp = await fetch(`api/history/${entryId}`);
   if (!resp.ok) return;
   const entry = await resp.json();
   renderGenerationResult(entry.result);
@@ -639,7 +639,7 @@ async function openHistoryEntry(entryId) {
 // ---- 初始化 ----
 
 async function loadCurrentModel() {
-  const resp = await fetch("/api/config");
+  const resp = await fetch("api/config");
   if (!resp.ok) return;
   const config = await resp.json();
   document.getElementById("current-model-badge").textContent = `调用模型: ${config.model}`;

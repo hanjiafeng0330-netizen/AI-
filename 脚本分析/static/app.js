@@ -195,7 +195,7 @@ async function loadHistory() {
   const listEl = document.getElementById("history-list");
   listEl.innerHTML = "<p>加载中…</p>";
   try {
-    const resp = await fetch("/api/history");
+    const resp = await fetch("api/history");
     if (!resp.ok) throw new Error("加载历史记录失败");
     const entries = await resp.json();
     if (entries.length === 0) {
@@ -221,7 +221,7 @@ async function loadHistory() {
 }
 
 async function openHistoryEntry(entryId) {
-  const resp = await fetch(`/api/history/${entryId}`);
+  const resp = await fetch(`api/history/${entryId}`);
   if (!resp.ok) return;
   const entry = await resp.json();
 
@@ -250,7 +250,7 @@ textForm.addEventListener("submit", async (e) => {
   const scriptText = document.getElementById("script-text").value;
 
   try {
-    const resp = await fetch("/api/analyze/text", {
+    const resp = await fetch("api/analyze/text", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ script_text: scriptText }),
@@ -292,7 +292,7 @@ videoForm.addEventListener("submit", async (e) => {
   formData.append("frame_interval_sec", frameInterval);
 
   try {
-    const resp = await fetch("/api/analyze/video", {
+    const resp = await fetch("api/analyze/video", {
       method: "POST",
       body: formData,
     });
@@ -313,7 +313,7 @@ function pollJob(jobId) {
   return new Promise((resolve, reject) => {
     const interval = setInterval(async () => {
       try {
-        const resp = await fetch(`/api/jobs/${jobId}`);
+        const resp = await fetch(`api/jobs/${jobId}`);
         if (!resp.ok) {
           throw new Error("查询任务状态失败");
         }
