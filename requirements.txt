@@ -1,3 +1,5 @@
+--extra-index-url https://pypi.org/simple/
+
 # 提示词生成
 fastapi
 uvicorn[standard]
