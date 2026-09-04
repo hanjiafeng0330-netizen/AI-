@@ -7,7 +7,7 @@ import pydantic
 from json_repair import repair_json
 from anthropic import Anthropic
 
-from .config import ANTHROPIC_API_KEY, ANTHROPIC_BASE_URL, CLAUDE_MODEL
+from .config import get_anthropic_api_key, get_anthropic_base_url, get_claude_model
 from .models import (
     AnalysisResult,
     ModelConfig,
@@ -29,21 +29,24 @@ MODEL_PRICING_PER_MTOK: dict[str, tuple[float, float]] = {
 }
 
 _client: Anthropic | None = None
+_client_api_key: str = ""
 
 
 def _get_client() -> Anthropic:
-    global _client
-    if _client is None:
-        if not ANTHROPIC_API_KEY:
+    global _client, _client_api_key
+    current_key = get_anthropic_api_key()
+    if _client is None or _client_api_key != current_key:
+        if not current_key:
             raise RuntimeError("未配置 ANTHROPIC_API_KEY")
         _client = Anthropic(
-            api_key=ANTHROPIC_API_KEY,
-            base_url=ANTHROPIC_BASE_URL,
+            api_key=current_key,
+            base_url=get_anthropic_base_url(),
             http_client=httpx2.Client(
                 trust_env=False,
                 timeout=httpx2.Timeout(connect=30.0, read=600.0, write=600.0, pool=600.0),
             ),
         )
+        _client_api_key = current_key
     return _client
 
 
@@ -281,14 +284,14 @@ def generate_scripts(
     if feedback_examples:
         variables["历史反馈参考"] = feedback_examples
     final_prompt = _render_final_prompt(user_prompt, variables)
-    model_params = ModelConfig(model=CLAUDE_MODEL, temperature=None, max_tokens=MAX_TOKENS)
+    model_params = ModelConfig(model=get_claude_model(), temperature=None, max_tokens=MAX_TOKENS)
 
     client = _get_client()
     last_error: Exception | None = None
     for _attempt in range(1, MAX_SUBMIT_RETRIES + 1):
         started = time.perf_counter()
         response = client.messages.create(
-            model=CLAUDE_MODEL,
+            model=get_claude_model(),
             max_tokens=MAX_TOKENS,
             system=system_prompt,
             messages=[{"role": "user", "content": final_prompt}],
@@ -312,7 +315,7 @@ def generate_scripts(
                 final_prompt=final_prompt,
                 model_params=model_params,
                 response=json.dumps({"scripts": scripts_data}, ensure_ascii=False, indent=2),
-                metadata=_build_metadata(response, elapsed_ms, CLAUDE_MODEL),
+                metadata=_build_metadata(response, elapsed_ms, get_claude_model()),
             )
             return scripts, [step]
         except (json.JSONDecodeError, pydantic.ValidationError, ValueError, RuntimeError) as exc:

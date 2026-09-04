@@ -3,11 +3,11 @@ import uuid
 
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from starlette.middleware.base import BaseHTTPMiddleware
 
 from . import history, products, source_scripts
-from .config import BASE_DIR, CLAUDE_MODEL, RESULTS_DIR
+from .config import AVAILABLE_MODELS, BASE_DIR, RESULTS_DIR, get_claude_model, is_configured, save_anthropic_settings
 from .generator import generate_scripts, render_plain_script
 from .models import (
     AnalysisResult,
@@ -37,9 +37,48 @@ class NoCacheStaticMiddleware(BaseHTTPMiddleware):
 app.add_middleware(NoCacheStaticMiddleware)
 
 
+class AnthropicSettingsRequest(BaseModel):
+    api_key: str = Field(min_length=1, max_length=4096)
+    model: str = Field(min_length=1, max_length=128)
+    base_url: str = Field(default="", max_length=512)
+
+
+class AnthropicSettingsStatus(BaseModel):
+    configured: bool
+    model: str
+    base_url: str
+
+
+@app.get("/api/settings/anthropic", response_model=AnthropicSettingsStatus)
+def api_anthropic_settings_status():
+    return AnthropicSettingsStatus(
+        configured=is_configured(),
+        model=get_claude_model(),
+        base_url="",
+    )
+
+
+@app.put("/api/settings/anthropic", response_model=AnthropicSettingsStatus)
+def api_save_anthropic_settings(request: AnthropicSettingsRequest):
+    try:
+        save_anthropic_settings(request.api_key, request.model, request.base_url)
+    except (ValueError, RuntimeError) as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    return AnthropicSettingsStatus(
+        configured=True,
+        model=request.model,
+        base_url=request.base_url,
+    )
+
+
+@app.get("/api/settings/models")
+def api_list_models():
+    return AVAILABLE_MODELS
+
+
 @app.get("/api/config")
 def get_config() -> dict:
-    return {"model": CLAUDE_MODEL}
+    return {"model": get_claude_model()}
 
 
 @app.get("/api/source-scripts", response_model=list[SourceScriptSummary])
