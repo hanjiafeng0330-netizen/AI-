@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ENV_FILE = PROJECT_ROOT / ".env"
-load_dotenv(ENV_FILE)
+load_dotenv(ENV_FILE, override=True)
 
 STORAGE_DIR = PROJECT_ROOT / "storage"
 BATCHES_DIR = STORAGE_DIR / "batches"

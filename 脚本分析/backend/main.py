@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 
 from . import history
 from .analyzer import analyze_text_script
-from .config import AVAILABLE_MODELS, BASE_DIR, DEFAULT_FRAME_INTERVAL_SEC, VIDEOS_DIR, get_openai_base_url, get_openai_model, is_configured, save_openai_settings
+from .config import AVAILABLE_MODELS, BASE_DIR, DEFAULT_FRAME_INTERVAL_SEC, RESULTS_DIR, VIDEOS_DIR, get_openai_base_url, get_openai_model, is_configured, save_openai_settings
 from .jobs import create_job, get_job, run_video_pipeline
 from .models import (
     AnalysisResponse,

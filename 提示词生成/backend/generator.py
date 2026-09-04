@@ -23,14 +23,8 @@ SCRIPT_COUNT = 5
 MAX_TOKENS = 16000
 
 MODEL_PRICING_PER_MTOK: dict[str, tuple[float, float]] = {
-    "gpt-5.3-chat-latest": (2.0, 8.0),
-    "gpt-5.2-chat-latest": (2.0, 8.0),
-    "gpt-5.1-chat-latest": (2.0, 8.0),
     "gpt-4o": (2.5, 10.0),
-    "gpt-4.1": (2.0, 8.0),
     "gpt-4.1-mini": (0.4, 1.6),
-    "o3": (10.0, 40.0),
-    "o4-mini": (1.1, 4.4),
 }
 
 _client: OpenAI | None = None
