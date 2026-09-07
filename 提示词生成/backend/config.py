@@ -15,10 +15,7 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://llm.baifentan.com/openproxy/rp/v1/")
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
 
-# Runtime config (updated via settings API)
-_runtime_api_key = OPENAI_API_KEY
-_runtime_base_url = OPENAI_BASE_URL
-_runtime_model = OPENAI_MODEL
+# Config lock for file writes
 _config_lock = threading.Lock()
 
 AVAILABLE_MODELS = [
@@ -27,20 +24,42 @@ AVAILABLE_MODELS = [
 ]
 
 
+def _load_env_config() -> dict[str, str]:
+    """从 .env 文件加载最新配置，确保多进程环境下配置一致。"""
+    config = {
+        "api_key": "",
+        "base_url": "https://llm.baifentan.com/openproxy/rp/v1/",
+        "model": "gpt-4.1-mini",
+    }
+    if ENV_FILE.exists():
+        try:
+            for line in ENV_FILE.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if line.startswith("OPENAI_API_KEY="):
+                    config["api_key"] = line.split("=", 1)[1]
+                elif line.startswith("OPENAI_BASE_URL="):
+                    config["base_url"] = line.split("=", 1)[1]
+                elif line.startswith("OPENAI_MODEL="):
+                    config["model"] = line.split("=", 1)[1]
+        except OSError:
+            pass
+    return config
+
+
 def get_openai_api_key() -> str:
-    return _runtime_api_key
+    return _load_env_config()["api_key"]
 
 
 def get_openai_base_url() -> str:
-    return _runtime_base_url
+    return _load_env_config()["base_url"]
 
 
 def get_openai_model() -> str:
-    return _runtime_model
+    return _load_env_config()["model"]
 
 
 def is_configured() -> bool:
-    return bool(_runtime_api_key)
+    return bool(_load_env_config()["api_key"])
 
 
 def _validate_api_key(api_key: str) -> str:
@@ -65,7 +84,6 @@ def _save_env_line(existing: str, key: str, value: str) -> str:
 
 
 def save_openai_settings(api_key: str, model: str, base_url: str) -> None:
-    global _runtime_api_key, _runtime_base_url, _runtime_model
     key = _validate_api_key(api_key)
     target = ENV_FILE
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -90,9 +108,6 @@ def save_openai_settings(api_key: str, model: str, base_url: str) -> None:
                     os.unlink(temporary_name)
         except OSError as exc:
             raise RuntimeError("无法保存配置") from exc
-        _runtime_api_key = key
-        _runtime_base_url = base_url
-        _runtime_model = model
 
 
 STORAGE_DIR = BASE_DIR / "storage"
