@@ -421,8 +421,9 @@ generateForm.addEventListener("submit", async (e) => {
       }),
     });
     if (!resp.ok) {
-      const err = await resp.json();
-      throw new Error(err.detail || "生成失败");
+      let detail = `请求失败（${resp.status}）`;
+      try { const err = await resp.clone().json(); detail = err.detail || detail; } catch {}
+      throw new Error(detail);
     }
     const result = await resp.json();
     renderGenerationResult(result);

@@ -278,12 +278,14 @@ def _align_video_prompts(script: dict) -> dict:
         candidate = dict(candidate)
         candidate["role"] = role
         candidate.setdefault("duration_sec", seg.get("duration_sec"))
-        # 兜底：Claude 偶尔会漏填 jimeng_prompt / kling_prompt 其中一个字段，
-        # 用另一个字段回填，避免因单个字段缺失导致整批 5 条脚本校验失败、重试耗尽后 500。
+        # 兜底：LLM 偶尔用 content 字段代替 jimeng_prompt / kling_prompt，
+        # 或者漏填其中一个字段，统一用已有内容回填。
+        fallback = candidate.get("content", "")
         if not candidate.get("jimeng_prompt"):
-            candidate["jimeng_prompt"] = candidate.get("kling_prompt", "")
+            candidate["jimeng_prompt"] = candidate.get("kling_prompt", "") or fallback
         if not candidate.get("kling_prompt"):
-            candidate["kling_prompt"] = candidate.get("jimeng_prompt", "")
+            candidate["kling_prompt"] = candidate.get("jimeng_prompt", "") or fallback
+        candidate.pop("content", None)
         aligned.append(candidate)
     script["video_prompts"] = aligned
     return script
