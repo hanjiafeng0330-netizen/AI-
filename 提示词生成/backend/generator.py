@@ -2,7 +2,7 @@ import json
 import time
 from typing import Any
 
-import httpx2
+import httpx
 import pydantic
 from json_repair import repair_json
 from openai import OpenAI
@@ -40,9 +40,9 @@ def _get_client() -> OpenAI:
         _client = OpenAI(
             api_key=current_key,
             base_url=get_openai_base_url(),
-            http_client=httpx2.Client(
+            http_client=httpx.Client(
                 trust_env=False,
-                timeout=httpx2.Timeout(connect=30.0, read=600.0, write=600.0, pool=600.0),
+                timeout=httpx.Timeout(connect=30.0, read=600.0, write=600.0, pool=600.0),
             ),
         )
         _client_api_key = current_key
