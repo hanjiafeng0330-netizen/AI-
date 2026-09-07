@@ -20,8 +20,7 @@ WHISPER_MODEL_SIZE = os.environ.get("WHISPER_MODEL_SIZE", "small")
 _config_lock = threading.Lock()
 
 AVAILABLE_MODELS = [
-    {"id": "gpt-4.1-mini", "label": "GPT-4.1 Mini"},
-    {"id": "gpt-4o", "label": "GPT-4o"},
+    {"id": "gpt-5.6-sol", "label": "GPT-5.6 Sol"},
 ]
 
 
@@ -30,7 +29,7 @@ def _load_env_config() -> dict[str, str]:
     config = {
         "api_key": "",
         "base_url": "https://llm.baifentan.com/openproxy/rp/v1/",
-        "model": "gpt-4.1-mini",
+        "model": "gpt-5.6-sol",
     }
     if ENV_FILE.exists():
         try:
