@@ -161,7 +161,7 @@ def _build_submit_scripts_tool(script_count: int) -> dict:
                             "dialogue": _DIALOGUE_SCHEMA,
                             "video_prompts": _VIDEO_PROMPTS_SCHEMA,
                         },
-                        "required": ["variant_title", "variant_style", "structure", "dialogue", "video_prompts"],
+                        "required": ["structure", "dialogue", "video_prompts"],
                     },
                 },
             },
@@ -224,6 +224,17 @@ def _coerce_json_fields(data: dict, fields: tuple[str, ...]) -> dict:
                 data[field] = json.loads(value)
             except json.JSONDecodeError:
                 data[field] = json.loads(repair_json(value))
+        # Ensure list items are dicts (LLM may return strings)
+        if isinstance(data.get(field), list):
+            data[field] = [item for item in data[field] if isinstance(item, dict)]
+            # Also clean nested list fields within each script item
+            if field == "scripts":
+                for item in data[field]:
+                    if isinstance(item, dict):
+                        for nested in ("structure", "dialogue", "video_prompts"):
+                            val = item.get(nested)
+                            if isinstance(val, list):
+                                item[nested] = [v for v in val if isinstance(v, dict)]
     return data
 
 
@@ -252,10 +263,14 @@ def _align_video_prompts(script: dict) -> dict:
     prompts = script.get("video_prompts", [])
     by_role: dict[str, dict] = {}
     for p in prompts:
+        if not isinstance(p, dict):
+            continue
         by_role.setdefault(p.get("role"), p)
 
     aligned = []
     for i, seg in enumerate(structure):
+        if not isinstance(seg, dict):
+            continue
         role = seg.get("role")
         candidate = by_role.pop(role, None) or (prompts[i] if i < len(prompts) else None)
         if candidate is None:
@@ -348,7 +363,13 @@ def render_plain_script(script: ScriptVariant) -> str:
     for line in script.dialogue:
         dialogue_by_segment.setdefault(line.segment_index, []).append(line)
 
-    parts: list[str] = [f"【{script.variant_title}】{script.variant_style}", ""]
+    header_parts = []
+    if script.variant_title:
+        header_parts.append(f"【{script.variant_title}】")
+    if script.variant_style:
+        header_parts.append(script.variant_style)
+    header = " ".join(header_parts)
+    parts: list[str] = [header, ""] if header else [""]
     for i, seg in enumerate(script.structure):
         label = ROLE_LABELS.get(seg.role, seg.role)
         duration = f"（约{seg.duration_sec:.0f}秒）" if seg.duration_sec else ""

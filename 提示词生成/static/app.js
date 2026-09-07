@@ -320,7 +320,11 @@ function renderCurrentScript() {
   const script = currentResult.scripts[currentScriptIndex];
   const model = currentResult.prompt_trace?.[0]?.model_params?.model;
   const modelBadge = model ? `<span class="model-badge">调用模型: ${escapeHtml(model)}</span>` : "";
-  document.getElementById("script-variant-meta").innerHTML = `<b>${escapeHtml(script.variant_title)}</b> — ${escapeHtml(script.variant_style)} ${modelBadge}`;
+  const parts = [];
+  if (script.variant_title) parts.push(`<b>${escapeHtml(script.variant_title)}</b>`);
+  if (script.variant_style) parts.push(escapeHtml(script.variant_style));
+  const variantMeta = parts.join(" — ");
+  document.getElementById("script-variant-meta").innerHTML = `${variantMeta} ${modelBadge}`.trim();
   renderScriptStatusBar();
   renderStructured(script);
   renderPlainScript();

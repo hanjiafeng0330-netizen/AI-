@@ -135,8 +135,8 @@ class GeneratedScript(BaseModel):
 
 
 class ScriptVariant(GeneratedScript):
-    variant_title: str = Field(description="创意方向标题，例如「情景剧·家长焦虑型」")
-    variant_style: str = Field(description="一句话说明这版脚本的差异化创意点")
+    variant_title: str = Field(default="", description="创意方向标题，例如「情景剧·家长焦虑型」")
+    variant_style: str = Field(default="", description="一句话说明这版脚本的差异化创意点")
 
 
 class VideoPromptEdit(BaseModel):
