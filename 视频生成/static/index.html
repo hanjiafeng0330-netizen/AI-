@@ -11,7 +11,7 @@
     <div>
       <p class="eyebrow">AI 图书自动化</p>
       <h1>视频生成工作台</h1>
-      <p class="subtitle">使用“提示词生成”工作台的分段提示词，提交 Seedance 异步视频任务。</p>
+      <p class="subtitle">使用"提示词生成"工作台的分段提示词，提交 Seedance 异步视频任务。</p>
     </div>
     <div class="header-actions"><a href="/" class="secondary">← 返回首页</a><button id="open-settings" class="secondary">API 设置</button><button id="refresh-batches" class="secondary">刷新任务</button></div>
   </header>
@@ -31,52 +31,52 @@
   </div>
 
   <main>
-    <nav class=”tabs”>
-      <button class=”tab-btn active” data-tab=”generate”>生成</button>
-      <button class=”tab-btn” data-tab=”tasks”>任务</button>
-      <button class=”tab-btn” data-tab=”library”>本地视频库</button>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="generate">生成</button>
+      <button class="tab-btn" data-tab="tasks">任务</button>
+      <button class="tab-btn" data-tab="library">本地视频库</button>
     </nav>
 
-    <section class=”tab-panel active” id=”panel-generate”>
-      <section class=”panel generate-panel”>
-        <div class=”panel-title”><span>1</span><div><h2>选择脚本与分段</h2><p>每个勾选分段都会创建一个独立的远端视频任务。</p></div></div>
-        <div class=”grid two”>
-          <label>提示词结果<select id=”source-select”><option>正在加载…</option></select></label>
-          <label>脚本变体<select id=”variant-select” disabled><option>请先选择来源</option></select></label>
+    <section class="tab-panel active" id="panel-generate">
+      <section class="panel generate-panel">
+        <div class="panel-title"><span>1</span><div><h2>选择脚本与分段</h2><p>每个勾选分段都会创建一个独立的远端视频任务。</p></div></div>
+        <div class="grid two">
+          <label>提示词结果<select id="source-select"><option>正在加载…</option></select></label>
+          <label>脚本变体<select id="variant-select" disabled><option>请先选择来源</option></select></label>
         </div>
-        <div id=”variant-info” class=”hint”>请选择提示词结果和脚本变体。</div>
-        <div id=”segments” class=”segments”></div>
+        <div id="variant-info" class="hint">请选择提示词结果和脚本变体。</div>
+        <div id="segments" class="segments"></div>
 
-        <div class=”panel-title spaced”><span>2</span><div><h2>生成设置</h2><p>密钥只保存在后端本机 `.env`；可通过上方”API 设置”安全填写。</p></div></div>
-        <div class=”grid three”>
-          <label>生成类型<select id=”mode”><option value=”text”>文生视频</option><option value=”image”>图生视频</option></select></label>
-          <label>模型<select id=”model” disabled><option>正在加载模型能力…</option></select></label>
-          <label>服务档位<select id=”service-tier”><option value=””>使用服务默认值</option><option value=”default”>default</option><option value=”flex”>flex</option></select></label>
-          <label>视频时长<select id=”duration”><option value=”2”>2 秒</option><option value=”3”>3 秒</option><option value=”4”>4 秒</option><option value=”5” selected>5 秒</option><option value=”6”>6 秒</option><option value=”8”>8 秒</option><option value=”10”>10 秒</option><option value=”12”>12 秒</option></select></label>
-          <label>画面比例<select id=”ratio”><option value=”16:9”>16:9 横屏</option><option value=”9:16” selected>9:16 竖屏</option><option value=”1:1”>1:1 方形</option><option value=”4:3”>4:3</option><option value=”3:4”>3:4</option><option value=”21:9”>21:9 宽银幕</option></select></label>
-          <label>清晰度<select id=”resolution”><option value=”480p”>480p</option><option value=”720p” selected>720p</option><option value=”1080p”>1080p</option></select></label>
-          <label>每分段生成数量<select id=”quantity”><option value=”1” selected>1 条</option><option value=”2”>2 条</option><option value=”3”>3 条</option><option value=”4”>4 条</option><option value=”5”>5 条</option></select></label>
+        <div class="panel-title spaced"><span>2</span><div><h2>生成设置</h2><p>密钥只保存在后端本机 `.env`；可通过上方"API 设置"安全填写。</p></div></div>
+        <div class="grid three">
+          <label>生成类型<select id="mode"><option value="text">文生视频</option><option value="image">图生视频</option></select></label>
+          <label>模型<select id="model" disabled><option>正在加载模型能力…</option></select></label>
+          <label>服务档位<select id="service-tier"><option value="">使用服务默认值</option><option value="default">default</option><option value="flex">flex</option></select></label>
+          <label>视频时长<select id="duration"><option value="2">2 秒</option><option value="3">3 秒</option><option value="4">4 秒</option><option value="5" selected>5 秒</option><option value="6">6 秒</option><option value="8">8 秒</option><option value="10">10 秒</option><option value="12">12 秒</option></select></label>
+          <label>画面比例<select id="ratio"><option value="16:9">16:9 横屏</option><option value="9:16" selected>9:16 竖屏</option><option value="1:1">1:1 方形</option><option value="4:3">4:3</option><option value="3:4">3:4</option><option value="21:9">21:9 宽银幕</option></select></label>
+          <label>清晰度<select id="resolution"><option value="480p">480p</option><option value="720p" selected>720p</option><option value="1080p">1080p</option></select></label>
+          <label>每分段生成数量<select id="quantity"><option value="1" selected>1 条</option><option value="2">2 条</option><option value="3">3 条</option><option value="4">4 条</option><option value="5">5 条</option></select></label>
         </div>
-        <label id=”image-url-row” class=”hidden”>公开 HTTPS 图片 URL<input id=”image-url” type=”url” placeholder=”https://example.com/cover.jpg”></label>
-        <p id=”image-notice” class=”warning hidden”>图生视频已提供选择与参数入口；Provider 的图片 content 字段尚待文档/联调确认。当前提交会安全地被后端拦截，不会创建远端任务。</p>
-        <label class=”checkbox”><input id=”generate-audio” type=”checkbox” disabled> 同步生成原生音频</label>
-        <p id=”audio-notice” class=”hint”>音频是否可用由模型能力决定；Seedance 2.0 Fast 需当前 VIP/已授权账户在 OpenProxy 可用，失败时会显示 Provider 错误且不会自动重试。</p>
-        <div class=”submit-row”><span id=”selection-summary”>尚未选择分段</span><button id=”submit” disabled>创建视频任务</button></div>
-        <p id=”form-error” class=”error” role=”alert”></p>
+        <label id="image-url-row" class="hidden">公开 HTTPS 图片 URL<input id="image-url" type="url" placeholder="https://example.com/cover.jpg"></label>
+        <p id="image-notice" class="warning hidden">图生视频已提供选择与参数入口；Provider 的图片 content 字段尚待文档/联调确认。当前提交会安全地被后端拦截，不会创建远端任务。</p>
+        <label class="checkbox"><input id="generate-audio" type="checkbox" disabled> 同步生成原生音频</label>
+        <p id="audio-notice" class="hint">音频是否可用由模型能力决定；Seedance 2.0 Fast 需当前 VIP/已授权账户在 OpenProxy 可用，失败时会显示 Provider 错误且不会自动重试。</p>
+        <div class="submit-row"><span id="selection-summary">尚未选择分段</span><button id="submit" disabled>创建视频任务</button></div>
+        <p id="form-error" class="error" role="alert"></p>
       </section>
     </section>
 
-    <section class=”tab-panel” id=”panel-tasks”>
-      <section class=”panel”>
-        <div class=”panel-title”><span>3</span><div><h2>任务队列与历史</h2><p>页面会自动读取本地任务状态；生成过程中刷新页面或重启服务都不会重复提交。</p></div></div>
-        <div id=”batches” class=”batches”><p class=”hint”>正在加载任务记录…</p></div>
+    <section class="tab-panel" id="panel-tasks">
+      <section class="panel">
+        <div class="panel-title"><span>3</span><div><h2>任务队列与历史</h2><p>页面会自动读取本地任务状态；生成过程中刷新页面或重启服务都不会重复提交。</p></div></div>
+        <div id="batches" class="batches"><p class="hint">正在加载任务记录…</p></div>
       </section>
     </section>
 
-    <section class=”tab-panel” id=”panel-library”>
-      <section class=”panel”>
-        <div class=”panel-title”><span>4</span><div><h2>本地视频库</h2><p>所有已下载到本地的视频文件，可预览和下载。</p></div></div>
-        <div id=”video-library” class=”video-library”><p class=”hint”>正在加载视频文件…</p></div>
+    <section class="tab-panel" id="panel-library">
+      <section class="panel">
+        <div class="panel-title"><span>4</span><div><h2>本地视频库</h2><p>所有已下载到本地的视频文件，可预览和下载。</p></div></div>
+        <div id="video-library" class="video-library"><p class="hint">正在加载视频文件…</p></div>
       </section>
     </section>
   </main>
