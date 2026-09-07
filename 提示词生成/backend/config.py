@@ -84,15 +84,19 @@ def _save_env_line(existing: str, key: str, value: str) -> str:
     return "".join(filtered)
 
 
-def save_openai_settings(api_key: str, model: str, base_url: str) -> None:
-    key = _validate_api_key(api_key)
+def save_openai_settings(api_key: str | None, model: str, base_url: str) -> None:
     target = ENV_FILE
     target.parent.mkdir(parents=True, exist_ok=True)
 
     with _config_lock:
         try:
             existing = target.read_text(encoding="utf-8") if target.exists() else ""
-            updated = _save_env_line(existing, "OPENAI_API_KEY", key)
+            # 如果 api_key 为空，保留原有的 key
+            if api_key:
+                key = _validate_api_key(api_key)
+                updated = _save_env_line(existing, "OPENAI_API_KEY", key)
+            else:
+                updated = existing
             updated = _save_env_line(updated, "OPENAI_BASE_URL", base_url)
             updated = _save_env_line(updated, "OPENAI_MODEL", model)
             descriptor, temporary_name = tempfile.mkstemp(prefix=f".{target.name}.", dir=target.parent)

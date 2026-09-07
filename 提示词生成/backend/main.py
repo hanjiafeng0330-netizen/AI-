@@ -38,7 +38,7 @@ app.add_middleware(NoCacheStaticMiddleware)
 
 
 class AnthropicSettingsRequest(BaseModel):
-    api_key: str = Field(min_length=1, max_length=4096)
+    api_key: str | None = Field(default=None, max_length=4096)
     model: str = Field(min_length=1, max_length=128)
     base_url: str = Field(default="", max_length=512)
 
