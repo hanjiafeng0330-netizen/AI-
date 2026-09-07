@@ -20,6 +20,8 @@ WHISPER_MODEL_SIZE = os.environ.get("WHISPER_MODEL_SIZE", "small")
 _config_lock = threading.Lock()
 
 AVAILABLE_MODELS = [
+    {"id": "gpt-4o", "label": "GPT-4o"},
+    {"id": "gpt-4.1-mini", "label": "GPT-4.1 Mini"},
     {"id": "gpt-5.6-sol", "label": "GPT-5.6 Sol"},
 ]
 
