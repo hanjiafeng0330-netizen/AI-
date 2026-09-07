@@ -98,7 +98,7 @@ async function submitBatch() {
 function audioText(task) { const messages = { requested:'已请求音频，下载后将检测音轨', detected:'已检测到 MP4 音轨', not_detected:'未检测到 MP4 音轨', unknown:'无法检测音轨，请在播放器确认', not_requested:'未请求音频' }; return messages[task.audio_status] || '音频状态未知'; }
 function renderTask(task, batch) {
   const files = task.local_video_filenames?.length ? task.local_video_filenames : task.local_video_filename ? [task.local_video_filename] : [];
-  const media = files.map((file, index) => `<div class="media-item"><video controls src="/video/media/videos/${encodeURIComponent(file)}"></video><a href="/video/media/videos/${encodeURIComponent(file)}" download>下载视频 ${files.length > 1 ? index + 1 : ''}</a></div>`).join('');
+  const media = files.map((file, index) => `<div class="media-item"><video controls autoplay muted src="/video/media/videos/${encodeURIComponent(file)}"></video><a href="/video/media/videos/${encodeURIComponent(file)}" download>下载视频 ${files.length > 1 ? index + 1 : ''}</a></div>`).join('');
   const remote = '';
   const cancel = !['completed','failed','cancelled'].includes(task.status) ? `<button data-cancel="${task.job_id}" data-batch="${batch.batch_id}">取消任务</button>` : '';
   const retry = task.download_error ? `<button data-retry="${task.job_id}" data-batch="${batch.batch_id}">重试下载</button>` : '';
