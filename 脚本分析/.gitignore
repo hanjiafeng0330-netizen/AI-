@@ -1,8 +1,4 @@
 .env
-storage/videos/
-storage/frames/
-storage/audio/
-storage/results/
 __pycache__/
-*.pyc
+*.py[cod]
 .DS_Store

@@ -1,0 +1,61 @@
+{
+  "source_type": "text",
+  "structure": [
+    {
+      "start": null,
+      "end": null,
+      "role": "hook",
+      "summary": "开场打招呼并引入主题，分享一个学习方法。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "buildup",
+      "summary": "介绍学习方法的三个步骤：制定计划、专注执行、及时复习。"
+    }
+  ],
+  "dialogue": [
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "大家好，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "今天分享一个学习方法。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第一步制定计划，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第二步专注执行，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第三步及时复习。"
+    }
+  ],
+  "visual": [],
+  "template": {
+    "hook_type": "问候+引入主题",
+    "pacing_seconds": 10.0,
+    "visual_style": null,
+    "cta_style": "无明确CTA",
+    "tags": [
+      "学习方法",
+      "步骤讲解",
+      "教学"
+    ]
+  }
+}

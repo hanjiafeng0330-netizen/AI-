@@ -1,0 +1,57 @@
+{
+  "source_type": "text",
+  "structure": [
+    {
+      "start": null,
+      "end": null,
+      "role": "hook",
+      "summary": "以\"历史记录测试\"为开篇，吸引目标用户关注测试与数据落盘的话题"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "setup",
+      "summary": "说明核心目的：验证文本内容是否能正确落盘"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "climax",
+      "summary": "提出关键验证点：落盘后能否在历史列表中正确展示"
+    }
+  ],
+  "dialogue": [
+    {
+      "start": null,
+      "end": null,
+      "speaker": "旁白",
+      "text": "历史记录测试文本，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "旁白",
+      "text": "验证是否能正确落盘"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "旁白",
+      "text": "并在历史列表中展示。"
+    }
+  ],
+  "visual": [],
+  "template": {
+    "hook_type": "功能说明型开篇（直接点明测试目的）",
+    "pacing_seconds": 5.0,
+    "visual_style": "纯文字口播，无视觉设计要求",
+    "cta_style": "无明确CTA（纯功能验证文本，无引导行动）",
+    "tags": [
+      "测试文本",
+      "数据落盘",
+      "历史记录",
+      "功能验证",
+      "列表展示"
+    ]
+  }
+}

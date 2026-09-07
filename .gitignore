@@ -21,10 +21,11 @@ build/
 # Sensitive files
 *.rtf
 
-# Storage data
-storage/
+# Storage data (tracked — test data)
+# storage/
 
 # Environment
 .env
+.venv/
 venv/
 env/

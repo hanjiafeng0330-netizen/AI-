@@ -1,0 +1,773 @@
+{
+  "id": "6377a98debee",
+  "scripts": [
+    {
+      "structure": [
+        {
+          "role": "hook",
+          "summary": "孩子挑战作业扭头看书，书本闪光提示“答案？！”",
+          "duration_sec": null
+        },
+        {
+          "role": "setup",
+          "summary": "介绍《测试产品》，涵盖语数英多学科，支持小学课程",
+          "duration_sec": null
+        },
+        {
+          "role": "buildup",
+          "summary": "展示书本功能支持，解锁同步教学和趣味学习",
+          "duration_sec": null
+        },
+        {
+          "role": "climax",
+          "summary": "学习成绩提高，孩子自信笑容镜头，学习场景和进步对比",
+          "duration_sec": null
+        },
+        {
+          "role": "other",
+          "summary": "欢快场景中书本智能感十足，内页内容丰富多彩",
+          "duration_sec": null
+        }
+      ],
+      "dialogue": [
+        {
+          "segment_index": 0,
+          "speaker": null,
+          "text": "这道题好难，还是看看《测试产品》吧！"
+        },
+        {
+          "segment_index": 1,
+          "speaker": null,
+          "text": "<书中>：这本书涵盖了语文、数学、英语多学科，尤其适合小学生使用。"
+        },
+        {
+          "segment_index": 2,
+          "speaker": null,
+          "text": "它提供了同步课程内容，孩子能更轻松地理解课本知识。"
+        },
+        {
+          "segment_index": 3,
+          "speaker": null,
+          "text": "我孩子的成绩明显提高了，现在他学习充满自信。"
+        },
+        {
+          "segment_index": 4,
+          "speaker": null,
+          "text": "<背景>：智能书页自动点读，内容生动有趣。"
+        }
+      ],
+      "video_prompts": [
+        {
+          "role": "hook",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "setup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "buildup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "climax",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "other",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        }
+      ],
+      "variant_title": "",
+      "variant_style": ""
+    },
+    {
+      "structure": [
+        {
+          "role": "hook",
+          "summary": "父母烦恼孩子学习，进入书房惊见神器《测试产品》",
+          "duration_sec": null
+        },
+        {
+          "role": "setup",
+          "summary": "《测试产品》特色功能介绍，重点面向小学生设计",
+          "duration_sec": null
+        },
+        {
+          "role": "buildup",
+          "summary": "场景切换展示书本与课本同步使用的便利",
+          "duration_sec": null
+        },
+        {
+          "role": "climax",
+          "summary": "使用后孩子成绩大幅提升，展示具体科目成绩对比",
+          "duration_sec": null
+        },
+        {
+          "role": "other",
+          "summary": "学生通过《测试产品》展示自信编制家庭作业",
+          "duration_sec": null
+        }
+      ],
+      "dialogue": [
+        {
+          "segment_index": 0,
+          "speaker": null,
+          "text": "又头疼孩子的学业？看看我们的《测试产品》！"
+        },
+        {
+          "segment_index": 1,
+          "speaker": null,
+          "text": "这一书完全为小学阶段量身打造，各科覆盖无死角。"
+        },
+        {
+          "segment_index": 2,
+          "speaker": null,
+          "text": "手指轻点，便能激活多模式互动学习，方便又高效。"
+        },
+        {
+          "segment_index": 3,
+          "speaker": null,
+          "text": "用过之后，我家孩子成绩有了质的飞跃，老师都赞不绝口！"
+        },
+        {
+          "segment_index": 4,
+          "speaker": null,
+          "text": "<背景>：智能书本界面流畅高清，让学习充满乐趣。"
+        }
+      ],
+      "video_prompts": [
+        {
+          "role": "hook",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "setup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "buildup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "climax",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "other",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        }
+      ],
+      "variant_title": "",
+      "variant_style": ""
+    },
+    {
+      "structure": [
+        {
+          "role": "hook",
+          "summary": "学生参加考试紧张，老师推荐《测试产品》解题秘籍",
+          "duration_sec": null
+        },
+        {
+          "role": "setup",
+          "summary": "书中功能展示，覆盖教学、练习、复习多环节",
+          "duration_sec": null
+        },
+        {
+          "role": "buildup",
+          "summary": "《测试产品》的多学科练习题库，帮助突破学习瓶颈",
+          "duration_sec": null
+        },
+        {
+          "role": "climax",
+          "summary": "孩子从紧张到自信，考试成功场景闪回",
+          "duration_sec": null
+        },
+        {
+          "role": "other",
+          "summary": "书本外观高科技设计，标配智能感应",
+          "duration_sec": null
+        }
+      ],
+      "dialogue": [
+        {
+          "segment_index": 0,
+          "speaker": null,
+          "text": "考试周到了，还在担心题目太难？试试《测试产品》！"
+        },
+        {
+          "segment_index": 1,
+          "speaker": null,
+          "text": "我们的书本集教学、练习、复习功能于一身，专为小学客户设计。"
+        },
+        {
+          "segment_index": 2,
+          "speaker": null,
+          "text": "多手动选择模拟题库，学生不断突破自我瓶颈。"
+        },
+        {
+          "segment_index": 3,
+          "speaker": null,
+          "text": "有了这本书，原本紧张的孩子现在自信微笑地走出考场。"
+        },
+        {
+          "segment_index": 4,
+          "speaker": null,
+          "text": "<背景>：书本采用感应科技，让学习更轻松。"
+        }
+      ],
+      "video_prompts": [
+        {
+          "role": "hook",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "setup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "buildup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "climax",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "other",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        }
+      ],
+      "variant_title": "",
+      "variant_style": ""
+    },
+    {
+      "structure": [
+        {
+          "role": "hook",
+          "summary": "孩子难以专注，读书神器《测试产品》来帮忙",
+          "duration_sec": null
+        },
+        {
+          "role": "setup",
+          "summary": "讲解《测试产品》简介及主要功能，适合任何小学年级",
+          "duration_sec": null
+        },
+        {
+          "role": "buildup",
+          "summary": "展示多种形式的互动式学习，内附趣味游戏",
+          "duration_sec": null
+        },
+        {
+          "role": "climax",
+          "summary": "使用《测试产品》后，学生专注力提升显著，实景展示",
+          "duration_sec": null
+        },
+        {
+          "role": "other",
+          "summary": "书本呈现数字化内容，功能界面一目了然",
+          "duration_sec": null
+        }
+      ],
+      "dialogue": [
+        {
+          "segment_index": 0,
+          "speaker": null,
+          "text": "孩子做作业总是分心？《测试产品》来解救！"
+        },
+        {
+          "segment_index": 1,
+          "speaker": null,
+          "text": "这本书涵盖了多学科知识，适合小学生的主要学科学习。"
+        },
+        {
+          "segment_index": 2,
+          "speaker": null,
+          "text": "提供互动学习模式，配有趣味游戏，孩子爱不释手。"
+        },
+        {
+          "segment_index": 3,
+          "speaker": null,
+          "text": "有了这本书，我家孩子现在全神贯注，在学业上表现优异。"
+        },
+        {
+          "segment_index": 4,
+          "speaker": null,
+          "text": "<背景>：书本UI设计直观，孩子自主使用系统引导。"
+        }
+      ],
+      "video_prompts": [
+        {
+          "role": "hook",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "setup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "buildup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "climax",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "other",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        }
+      ],
+      "variant_title": "",
+      "variant_style": ""
+    },
+    {
+      "structure": [
+        {
+          "role": "hook",
+          "summary": "小朋友自己动手解决问题，书本提供支持，家长感动",
+          "duration_sec": null
+        },
+        {
+          "role": "setup",
+          "summary": "介绍书中章节及学科覆盖，解释交互功能",
+          "duration_sec": null
+        },
+        {
+          "role": "buildup",
+          "summary": "突出书中DIY项目和作业指导，增添学习乐趣",
+          "duration_sec": null
+        },
+        {
+          "role": "climax",
+          "summary": "展示孩子独立完成任务，提升自信心，并获得老师夸奖",
+          "duration_sec": null
+        },
+        {
+          "role": "other",
+          "summary": "书本配有个性化学习计划与贴心的用户体验设计",
+          "duration_sec": null
+        }
+      ],
+      "dialogue": [
+        {
+          "segment_index": 0,
+          "speaker": null,
+          "text": "当孩子自己解决问题时，家长忍不住为他点赞！"
+        },
+        {
+          "segment_index": 1,
+          "speaker": null,
+          "text": "这本书提供丰富的学科项目，交互界面许多学习乐趣。"
+        },
+        {
+          "segment_index": 2,
+          "speaker": null,
+          "text": "它还有各种DIY项目和作业指导，让孩子动手动脑。"
+        },
+        {
+          "segment_index": 3,
+          "speaker": null,
+          "text": "孩子因完成了教室任务而获得老师的称赞，他的自信心大增！"
+        },
+        {
+          "segment_index": 4,
+          "speaker": null,
+          "text": "<背景>：智能化的书本界面，让学习计划个性化，更加人性化。"
+        }
+      ],
+      "video_prompts": [
+        {
+          "role": "hook",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "setup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "buildup",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "climax",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        },
+        {
+          "role": "other",
+          "duration_sec": null,
+          "jimeng_prompt": "",
+          "kling_prompt": ""
+        }
+      ],
+      "variant_title": "",
+      "variant_style": ""
+    }
+  ],
+  "plain_scripts": [
+    "【】\n\n【开场钩子（前贴）】\n孩子挑战作业扭头看书，书本闪光提示“答案？！”\n这道题好难，还是看看《测试产品》吧！\n\n【引入】\n介绍《测试产品》，涵盖语数英多学科，支持小学课程\n<书中>：这本书涵盖了语文、数学、英语多学科，尤其适合小学生使用。\n\n【铺垫】\n展示书本功能支持，解锁同步教学和趣味学习\n它提供了同步课程内容，孩子能更轻松地理解课本知识。\n\n【高潮/卖点展示】\n学习成绩提高，孩子自信笑容镜头，学习场景和进步对比\n我孩子的成绩明显提高了，现在他学习充满自信。\n\n【其他】\n欢快场景中书本智能感十足，内页内容丰富多彩\n<背景>：智能书页自动点读，内容生动有趣。",
+    "【】\n\n【开场钩子（前贴）】\n父母烦恼孩子学习，进入书房惊见神器《测试产品》\n又头疼孩子的学业？看看我们的《测试产品》！\n\n【引入】\n《测试产品》特色功能介绍，重点面向小学生设计\n这一书完全为小学阶段量身打造，各科覆盖无死角。\n\n【铺垫】\n场景切换展示书本与课本同步使用的便利\n手指轻点，便能激活多模式互动学习，方便又高效。\n\n【高潮/卖点展示】\n使用后孩子成绩大幅提升，展示具体科目成绩对比\n用过之后，我家孩子成绩有了质的飞跃，老师都赞不绝口！\n\n【其他】\n学生通过《测试产品》展示自信编制家庭作业\n<背景>：智能书本界面流畅高清，让学习充满乐趣。",
+    "【】\n\n【开场钩子（前贴）】\n学生参加考试紧张，老师推荐《测试产品》解题秘籍\n考试周到了，还在担心题目太难？试试《测试产品》！\n\n【引入】\n书中功能展示，覆盖教学、练习、复习多环节\n我们的书本集教学、练习、复习功能于一身，专为小学客户设计。\n\n【铺垫】\n《测试产品》的多学科练习题库，帮助突破学习瓶颈\n多手动选择模拟题库，学生不断突破自我瓶颈。\n\n【高潮/卖点展示】\n孩子从紧张到自信，考试成功场景闪回\n有了这本书，原本紧张的孩子现在自信微笑地走出考场。\n\n【其他】\n书本外观高科技设计，标配智能感应\n<背景>：书本采用感应科技，让学习更轻松。",
+    "【】\n\n【开场钩子（前贴）】\n孩子难以专注，读书神器《测试产品》来帮忙\n孩子做作业总是分心？《测试产品》来解救！\n\n【引入】\n讲解《测试产品》简介及主要功能，适合任何小学年级\n这本书涵盖了多学科知识，适合小学生的主要学科学习。\n\n【铺垫】\n展示多种形式的互动式学习，内附趣味游戏\n提供互动学习模式，配有趣味游戏，孩子爱不释手。\n\n【高潮/卖点展示】\n使用《测试产品》后，学生专注力提升显著，实景展示\n有了这本书，我家孩子现在全神贯注，在学业上表现优异。\n\n【其他】\n书本呈现数字化内容，功能界面一目了然\n<背景>：书本UI设计直观，孩子自主使用系统引导。",
+    "【】\n\n【开场钩子（前贴）】\n小朋友自己动手解决问题，书本提供支持，家长感动\n当孩子自己解决问题时，家长忍不住为他点赞！\n\n【引入】\n介绍书中章节及学科覆盖，解释交互功能\n这本书提供丰富的学科项目，交互界面许多学习乐趣。\n\n【铺垫】\n突出书中DIY项目和作业指导，增添学习乐趣\n它还有各种DIY项目和作业指导，让孩子动手动脑。\n\n【高潮/卖点展示】\n展示孩子独立完成任务，提升自信心，并获得老师夸奖\n孩子因完成了教室任务而获得老师的称赞，他的自信心大增！\n\n【其他】\n书本配有个性化学习计划与贴心的用户体验设计\n<背景>：智能化的书本界面，让学习计划个性化，更加人性化。"
+  ],
+  "prompt_trace": [
+    {
+      "label": "脚本生成",
+      "system_prompt": "你是短视频带货脚本创作专家，尤其擅长图书类产品的口播/情景剧带货脚本，同时具备丰富的 AI 视频生成提示词（即梦、可灵）写作经验。\n\n你会收到两类输入：\n1. 「参考脚本分析」：一条已验证有效（爆款/测试过）的脚本的结构化分析结果，包含 structure（hook/setup/buildup/climax/cta 分段与概括）、dialogue（原台词）、template（可复用套路：hook 类型、节奏、视觉风格、CTA 风格、标签）。\n2. 「产品资料」：这次要推广的新产品信息（书名、价格、卖点、痛点、目标人群、正版特征等）。\n\n## 任务\n一次性产出 5 条内容不同、创意方向不同的新脚本变体（scripts 数组，必须正好 5 条）。5 条之间要有实质差异，不能只是同一个脚本换几个词。可以从下面方向中挑不同的来演绎，也欢迎你自己设计更新颖、更有传播力的形式：\n- 情景剧冲突型（亲子对话、朋友吐槽等）\n- 悬念提问型（先抛反常识观点/问题，制造好奇）\n- 数据/对比冲击型（用数字、前后对比制造紧迫感）\n- 第三方证言/街访型（模拟真实用户/家长现身说法）\n- 痛点共鸣型（直击目标人群的具体焦虑场景）\n- 反转/打脸型（先立一个错误认知，再打破它）\n- 沉浸式测评/开箱型（模拟主播实拍开箱讲解）\n\n每条脚本仍要复刻参考脚本 template 里的节奏/段落骨架/CTA 风格，只是创意表达、具体场景、台词不同；不要照抄参考脚本的原台词和具体人物设定。\n\n## 每条脚本的结构要求\n- structure：按 hook/setup/buildup/climax/cta（或 other）划分，片段数量与参考脚本大致一致\n- dialogue：新台词，只保留最关键的句子即可，每句标注所属 segment_index\n- video_prompts：与 structure 一一对应（数量、顺序、role 完全一致）\n\n## 关于 video_prompts 的详细程度（重要，写作时严格区分）\n- **hook 分段**（视频最前几秒的悬念/引流片段，业内也叫\"前贴\"）：jimeng_prompt 和 kling_prompt 必须写得足够完整、具体，能直接复制进 AI 视频工具生成可用画面，必须覆盖：\n  1. 场景：地点、时间、环境背景、光线氛围\n  2. 人物：外貌特征、衣着、所处位置\n  3. 动作：从头到尾的具体动作序列\n  4. 状态/情绪：表情与情绪状态\n  5. 台词：人物在这个镜头里说的具体台词内容（落到具体文字，不能只写\"说话\"）\n  6. 镜头：运镜方式（推/拉/摇/移/固定/跟随）、景别（远/中/近/特写）\n  7. 字幕/音效建议（如有）\n  用自然语句/分号连接表达即可，不需要加编号标题。\n- **其他分段**（setup/buildup/climax/cta 等）：保持简洁（每条 80-150 字），只需给出核心画面内容 + 镜头运镜 + 关键道具/字幕，不必像 hook 那样逐项展开，避免输出过长。\n\n必须调用 submit_scripts 工具，一次性提交全部 5 条脚本。\n如果输入变量中提供了「历史反馈参考」，请学习其中的话术风格与结构偏好，但不要照抄其中的具体文字。",
+      "user_prompt": "请基于下面变量中提供的「参考脚本分析」和「产品资料」，一次性生成 5 条创意方向不同的新带货脚本（结构骨架复刻参考脚本节奏，内容/打法各异，欢迎新颖大胆的形式）。\nhook 分段的 video_prompts 必须完整覆盖场景/人物外貌衣着/动作/情绪状态/具体台词/镜头运镜，可以直接复制去 AI 视频工具生成画面；其他分段保持简洁。\n必须调用 submit_scripts 工具提交全部 5 条。",
+      "variables": {
+        "参考脚本分析": {
+          "source_type": "video",
+          "structure": [
+            {
+              "start": 0.0,
+              "end": 4.0,
+              "role": "hook",
+              "summary": "展示产品和用户愉快互动，突出产品魅力和核心功能"
+            },
+            {
+              "start": 4.0,
+              "end": 14.0,
+              "role": "setup",
+              "summary": "详细介绍产品的功能和教学内容示例"
+            },
+            {
+              "start": 14.0,
+              "end": 20.0,
+              "role": "buildup",
+              "summary": "强调产品多学科支持及丰富的学习系统"
+            },
+            {
+              "start": 20.0,
+              "end": 30.0,
+              "role": "climax",
+              "summary": "说明产品使用带来的显著学习效果和适用场景"
+            },
+            {
+              "start": 30.0,
+              "end": 32.0,
+              "role": "other",
+              "summary": "突出产品智能与科技感的环境展示"
+            }
+          ],
+          "dialogue": [
+            {
+              "start": 0.0,
+              "end": 1.8,
+              "speaker": null,
+              "text": "这种给孩子入了这个全能学联系"
+            },
+            {
+              "start": 1.8,
+              "end": 3.0,
+              "speaker": null,
+              "text": "简直就是解放双手"
+            },
+            {
+              "start": 3.0,
+              "end": 4.8,
+              "speaker": null,
+              "text": "它这可不是普通的绘画板"
+            },
+            {
+              "start": 4.8,
+              "end": 6.2,
+              "speaker": null,
+              "text": "里面自带美术启蒙"
+            },
+            {
+              "start": 6.2,
+              "end": 7.8,
+              "speaker": null,
+              "text": "有几百种的视频课程"
+            },
+            {
+              "start": 7.8,
+              "end": 9.8,
+              "speaker": null,
+              "text": "从植物、动物、再到人物、建筑"
+            },
+            {
+              "start": 9.8,
+              "end": 10.6,
+              "speaker": null,
+              "text": "九种分类"
+            },
+            {
+              "start": 10.6,
+              "end": 11.4,
+              "speaker": null,
+              "text": "从零开始"
+            },
+            {
+              "start": 11.4,
+              "end": 12.4,
+              "speaker": null,
+              "text": "一步一步教孩子"
+            },
+            {
+              "start": 12.4,
+              "end": 13.2,
+              "speaker": null,
+              "text": "挖掘机怎么画"
+            },
+            {
+              "start": 13.2,
+              "end": 14.2,
+              "speaker": null,
+              "text": "土拨鼠又怎么画"
+            },
+            {
+              "start": 14.2,
+              "end": 16.8,
+              "speaker": null,
+              "text": "这可比外面花几百块去美术班划算多了"
+            },
+            {
+              "start": 16.8,
+              "end": 20.6,
+              "speaker": null,
+              "text": "它还可以学拼音、学汉字、学古诗、学英语、学儿歌等等"
+            },
+            {
+              "start": 20.6,
+              "end": 22.2,
+              "speaker": null,
+              "text": "一共有12个系统支持"
+            },
+            {
+              "start": 22.2,
+              "end": 23.0,
+              "speaker": null,
+              "text": "都是孩子喜欢的"
+            },
+            {
+              "start": 23.0,
+              "end": 24.4,
+              "speaker": null,
+              "text": "和日后课本里要学的知识"
+            },
+            {
+              "start": 24.4,
+              "end": 26.2,
+              "speaker": null,
+              "text": "我儿子现在已经会背小学的古诗了"
+            },
+            {
+              "start": 26.2,
+              "end": 28.0,
+              "speaker": null,
+              "text": "你不管拿它当个画画启蒙"
+            },
+            {
+              "start": 28.0,
+              "end": 30.2,
+              "speaker": null,
+              "text": "或者是早教早练都特别好用"
+            }
+          ],
+          "visual": [
+            {
+              "timestamp": 0.0,
+              "description": "中景镜头，女性坐室内地板上拿彩色包装盒，表情愉悦，画面居中且明亮，带有白底黑边大字幕及小胖老师品牌水印",
+              "technique": "构图居中/中景/品牌水印/字幕样式"
+            },
+            {
+              "timestamp": 2.0,
+              "description": "产品细节俯视微近景，手指操作彩色按键和小屏幕动画，字幕突出功能解放双手",
+              "technique": "特写/俯视镜头/字幕重点提醒"
+            },
+            {
+              "timestamp": 4.0,
+              "description": "中近景拍摄绘画屏幕彩色涂鸦动画鲸鱼，背景有装饰玩具书架，字幕黄色红边带闪电形状突出",
+              "technique": "中近景/色彩亮丽/字幕特效"
+            },
+            {
+              "timestamp": 6.0,
+              "description": "继续展示绘画动作细节，字幕强化主题无变化",
+              "technique": "动作细节/字幕持续"
+            },
+            {
+              "timestamp": 8.0,
+              "description": "车内场景特写电子绘画板及手部操作，强调随时随地使用的便利性",
+              "technique": "场景切换/稳定镜头/产品突出"
+            },
+            {
+              "timestamp": 10.0,
+              "description": "室内桌面手绘挖掘机动画，中景带字幕强调教学步骤",
+              "technique": "中景/教学内容强调"
+            },
+            {
+              "timestamp": 12.0,
+              "description": "特写绘画板屏幕动画卡通形象，电子笔绘制，背景卡通色彩丰富，字幕黑底白字",
+              "technique": "特写/色彩丰富/字幕样式变化"
+            },
+            {
+              "timestamp": 14.0,
+              "description": "车内镜头聚焦产品界面和交互操作，背景虚化无字幕",
+              "technique": "聚焦界面/背景虚化/无字幕"
+            },
+            {
+              "timestamp": 16.0,
+              "description": "中景侧拍手持写字板，屏幕显示古诗学习图标，车内环境",
+              "technique": "中景/侧拍/生活化场景"
+            },
+            {
+              "timestamp": 18.0,
+              "description": "俯视中景镜头，拼音教学内容，手部操作，车内环境清晰",
+              "technique": "俯视镜头/细节突出"
+            },
+            {
+              "timestamp": 20.0,
+              "description": "写字板近景特写，显示数学题，屏幕明亮，字幕突出记忆效果",
+              "technique": "特写/字幕显著"
+            },
+            {
+              "timestamp": 22.0,
+              "description": "中景写字板放桌面支架，书写英文单词，背景虚化，字幕强调专注力和绘画能力",
+              "technique": "中景/虚化背景/字幕突出"
+            },
+            {
+              "timestamp": 24.0,
+              "description": "相似画面轻微靠近，继续展示写字动作，字幕持续",
+              "technique": "细节推进/字幕持续"
+            },
+            {
+              "timestamp": 26.0,
+              "description": "中景画面手绘彩色卡通喷发火山，人物背影局部入画，字幕突出孩子高兴",
+              "technique": "中景/动作特写/字幕显著"
+            },
+            {
+              "timestamp": 28.0,
+              "description": "写字板近景，母女插画屏幕，黄色橙色卡通字体动态飞入，字幕显示儿歌教学",
+              "technique": "动画字幕/特写镜头"
+            },
+            {
+              "timestamp": 30.0,
+              "description": "写字板近景，百科知识图文介绍，明亮清晰，字幕突出内容丰富性",
+              "technique": "内容丰富/字幕突出"
+            },
+            {
+              "timestamp": 32.0,
+              "description": "中景略俯视角度，车内部方向盘及中控大屏显示3D车图，电子设备有彩色按键和屏幕饼干图案，画面冷静清晰，科技感强",
+              "technique": "俯视角度/静态镜头/科技氛围"
+            }
+          ],
+          "template": {
+            "hook_type": "情绪共鸣+产品展示",
+            "pacing_seconds": 2.0,
+            "visual_style": "色彩明亮，字幕突出，生活化场景结合产品细节特写",
+            "cta_style": "软性讲述，突出产品强大功能和易用性",
+            "tags": [
+              "教育科技",
+              "亲子学习",
+              "多功能产品",
+              "绘画教学",
+              "智能学习"
+            ]
+          }
+        },
+        "产品资料": {
+          "name": "测试产品",
+          "grade": "小学",
+          "price": "99",
+          "original_price": null,
+          "selling_points": [],
+          "pain_points": [],
+          "target_audience": null,
+          "authenticity_notes": null,
+          "extra_notes": null
+        }
+      },
+      "final_prompt": "请基于下面变量中提供的「参考脚本分析」和「产品资料」，一次性生成 5 条创意方向不同的新带货脚本（结构骨架复刻参考脚本节奏，内容/打法各异，欢迎新颖大胆的形式）。\nhook 分段的 video_prompts 必须完整覆盖场景/人物外貌衣着/动作/情绪状态/具体台词/镜头运镜，可以直接复制去 AI 视频工具生成画面；其他分段保持简洁。\n必须调用 submit_scripts 工具提交全部 5 条。\n\n### 参考脚本分析\n{\n  \"source_type\": \"video\",\n  \"structure\": [\n    {\n      \"start\": 0.0,\n      \"end\": 4.0,\n      \"role\": \"hook\",\n      \"summary\": \"展示产品和用户愉快互动，突出产品魅力和核心功能\"\n    },\n    {\n      \"start\": 4.0,\n      \"end\": 14.0,\n      \"role\": \"setup\",\n      \"summary\": \"详细介绍产品的功能和教学内容示例\"\n    },\n    {\n      \"start\": 14.0,\n      \"end\": 20.0,\n      \"role\": \"buildup\",\n      \"summary\": \"强调产品多学科支持及丰富的学习系统\"\n    },\n    {\n      \"start\": 20.0,\n      \"end\": 30.0,\n      \"role\": \"climax\",\n      \"summary\": \"说明产品使用带来的显著学习效果和适用场景\"\n    },\n    {\n      \"start\": 30.0,\n      \"end\": 32.0,\n      \"role\": \"other\",\n      \"summary\": \"突出产品智能与科技感的环境展示\"\n    }\n  ],\n  \"dialogue\": [\n    {\n      \"start\": 0.0,\n      \"end\": 1.8,\n      \"speaker\": null,\n      \"text\": \"这种给孩子入了这个全能学联系\"\n    },\n    {\n      \"start\": 1.8,\n      \"end\": 3.0,\n      \"speaker\": null,\n      \"text\": \"简直就是解放双手\"\n    },\n    {\n      \"start\": 3.0,\n      \"end\": 4.8,\n      \"speaker\": null,\n      \"text\": \"它这可不是普通的绘画板\"\n    },\n    {\n      \"start\": 4.8,\n      \"end\": 6.2,\n      \"speaker\": null,\n      \"text\": \"里面自带美术启蒙\"\n    },\n    {\n      \"start\": 6.2,\n      \"end\": 7.8,\n      \"speaker\": null,\n      \"text\": \"有几百种的视频课程\"\n    },\n    {\n      \"start\": 7.8,\n      \"end\": 9.8,\n      \"speaker\": null,\n      \"text\": \"从植物、动物、再到人物、建筑\"\n    },\n    {\n      \"start\": 9.8,\n      \"end\": 10.6,\n      \"speaker\": null,\n      \"text\": \"九种分类\"\n    },\n    {\n      \"start\": 10.6,\n      \"end\": 11.4,\n      \"speaker\": null,\n      \"text\": \"从零开始\"\n    },\n    {\n      \"start\": 11.4,\n      \"end\": 12.4,\n      \"speaker\": null,\n      \"text\": \"一步一步教孩子\"\n    },\n    {\n      \"start\": 12.4,\n      \"end\": 13.2,\n      \"speaker\": null,\n      \"text\": \"挖掘机怎么画\"\n    },\n    {\n      \"start\": 13.2,\n      \"end\": 14.2,\n      \"speaker\": null,\n      \"text\": \"土拨鼠又怎么画\"\n    },\n    {\n      \"start\": 14.2,\n      \"end\": 16.8,\n      \"speaker\": null,\n      \"text\": \"这可比外面花几百块去美术班划算多了\"\n    },\n    {\n      \"start\": 16.8,\n      \"end\": 20.6,\n      \"speaker\": null,\n      \"text\": \"它还可以学拼音、学汉字、学古诗、学英语、学儿歌等等\"\n    },\n    {\n      \"start\": 20.6,\n      \"end\": 22.2,\n      \"speaker\": null,\n      \"text\": \"一共有12个系统支持\"\n    },\n    {\n      \"start\": 22.2,\n      \"end\": 23.0,\n      \"speaker\": null,\n      \"text\": \"都是孩子喜欢的\"\n    },\n    {\n      \"start\": 23.0,\n      \"end\": 24.4,\n      \"speaker\": null,\n      \"text\": \"和日后课本里要学的知识\"\n    },\n    {\n      \"start\": 24.4,\n      \"end\": 26.2,\n      \"speaker\": null,\n      \"text\": \"我儿子现在已经会背小学的古诗了\"\n    },\n    {\n      \"start\": 26.2,\n      \"end\": 28.0,\n      \"speaker\": null,\n      \"text\": \"你不管拿它当个画画启蒙\"\n    },\n    {\n      \"start\": 28.0,\n      \"end\": 30.2,\n      \"speaker\": null,\n      \"text\": \"或者是早教早练都特别好用\"\n    }\n  ],\n  \"visual\": [\n    {\n      \"timestamp\": 0.0,\n      \"description\": \"中景镜头，女性坐室内地板上拿彩色包装盒，表情愉悦，画面居中且明亮，带有白底黑边大字幕及小胖老师品牌水印\",\n      \"technique\": \"构图居中/中景/品牌水印/字幕样式\"\n    },\n    {\n      \"timestamp\": 2.0,\n      \"description\": \"产品细节俯视微近景，手指操作彩色按键和小屏幕动画，字幕突出功能解放双手\",\n      \"technique\": \"特写/俯视镜头/字幕重点提醒\"\n    },\n    {\n      \"timestamp\": 4.0,\n      \"description\": \"中近景拍摄绘画屏幕彩色涂鸦动画鲸鱼，背景有装饰玩具书架，字幕黄色红边带闪电形状突出\",\n      \"technique\": \"中近景/色彩亮丽/字幕特效\"\n    },\n    {\n      \"timestamp\": 6.0,\n      \"description\": \"继续展示绘画动作细节，字幕强化主题无变化\",\n      \"technique\": \"动作细节/字幕持续\"\n    },\n    {\n      \"timestamp\": 8.0,\n      \"description\": \"车内场景特写电子绘画板及手部操作，强调随时随地使用的便利性\",\n      \"technique\": \"场景切换/稳定镜头/产品突出\"\n    },\n    {\n      \"timestamp\": 10.0,\n      \"description\": \"室内桌面手绘挖掘机动画，中景带字幕强调教学步骤\",\n      \"technique\": \"中景/教学内容强调\"\n    },\n    {\n      \"timestamp\": 12.0,\n      \"description\": \"特写绘画板屏幕动画卡通形象，电子笔绘制，背景卡通色彩丰富，字幕黑底白字\",\n      \"technique\": \"特写/色彩丰富/字幕样式变化\"\n    },\n    {\n      \"timestamp\": 14.0,\n      \"description\": \"车内镜头聚焦产品界面和交互操作，背景虚化无字幕\",\n      \"technique\": \"聚焦界面/背景虚化/无字幕\"\n    },\n    {\n      \"timestamp\": 16.0,\n      \"description\": \"中景侧拍手持写字板，屏幕显示古诗学习图标，车内环境\",\n      \"technique\": \"中景/侧拍/生活化场景\"\n    },\n    {\n      \"timestamp\": 18.0,\n      \"description\": \"俯视中景镜头，拼音教学内容，手部操作，车内环境清晰\",\n      \"technique\": \"俯视镜头/细节突出\"\n    },\n    {\n      \"timestamp\": 20.0,\n      \"description\": \"写字板近景特写，显示数学题，屏幕明亮，字幕突出记忆效果\",\n      \"technique\": \"特写/字幕显著\"\n    },\n    {\n      \"timestamp\": 22.0,\n      \"description\": \"中景写字板放桌面支架，书写英文单词，背景虚化，字幕强调专注力和绘画能力\",\n      \"technique\": \"中景/虚化背景/字幕突出\"\n    },\n    {\n      \"timestamp\": 24.0,\n      \"description\": \"相似画面轻微靠近，继续展示写字动作，字幕持续\",\n      \"technique\": \"细节推进/字幕持续\"\n    },\n    {\n      \"timestamp\": 26.0,\n      \"description\": \"中景画面手绘彩色卡通喷发火山，人物背影局部入画，字幕突出孩子高兴\",\n      \"technique\": \"中景/动作特写/字幕显著\"\n    },\n    {\n      \"timestamp\": 28.0,\n      \"description\": \"写字板近景，母女插画屏幕，黄色橙色卡通字体动态飞入，字幕显示儿歌教学\",\n      \"technique\": \"动画字幕/特写镜头\"\n    },\n    {\n      \"timestamp\": 30.0,\n      \"description\": \"写字板近景，百科知识图文介绍，明亮清晰，字幕突出内容丰富性\",\n      \"technique\": \"内容丰富/字幕突出\"\n    },\n    {\n      \"timestamp\": 32.0,\n      \"description\": \"中景略俯视角度，车内部方向盘及中控大屏显示3D车图，电子设备有彩色按键和屏幕饼干图案，画面冷静清晰，科技感强\",\n      \"technique\": \"俯视角度/静态镜头/科技氛围\"\n    }\n  ],\n  \"template\": {\n    \"hook_type\": \"情绪共鸣+产品展示\",\n    \"pacing_seconds\": 2.0,\n    \"visual_style\": \"色彩明亮，字幕突出，生活化场景结合产品细节特写\",\n    \"cta_style\": \"软性讲述，突出产品强大功能和易用性\",\n    \"tags\": [\n      \"教育科技\",\n      \"亲子学习\",\n      \"多功能产品\",\n      \"绘画教学\",\n      \"智能学习\"\n    ]\n  }\n}\n\n### 产品资料\n{\n  \"name\": \"测试产品\",\n  \"grade\": \"小学\",\n  \"price\": \"99\",\n  \"original_price\": null,\n  \"selling_points\": [],\n  \"pain_points\": [],\n  \"target_audience\": null,\n  \"authenticity_notes\": null,\n  \"extra_notes\": null\n}",
+      "model_params": {
+        "model": "gpt-4o",
+        "temperature": null,
+        "max_tokens": 16000
+      },
+      "response": "{\n  \"scripts\": [\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"孩子挑战作业扭头看书，书本闪光提示“答案？！”\"\n        },\n        {\n          \"role\": \"setup\",\n          \"summary\": \"介绍《测试产品》，涵盖语数英多学科，支持小学课程\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"展示书本功能支持，解锁同步教学和趣味学习\"\n        },\n        {\n          \"role\": \"climax\",\n          \"summary\": \"学习成绩提高，孩子自信笑容镜头，学习场景和进步对比\"\n        },\n        {\n          \"role\": \"other\",\n          \"summary\": \"欢快场景中书本智能感十足，内页内容丰富多彩\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"这道题好难，还是看看《测试产品》吧！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"<书中>：这本书涵盖了语文、数学、英语多学科，尤其适合小学生使用。\"\n        },\n        {\n          \"segment_index\": 2,\n          \"text\": \"它提供了同步课程内容，孩子能更轻松地理解课本知识。\"\n        },\n        {\n          \"segment_index\": 3,\n          \"text\": \"我孩子的成绩明显提高了，现在他学习充满自信。\"\n        },\n        {\n          \"segment_index\": 4,\n          \"text\": \"<背景>：智能书页自动点读，内容生动有趣。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"text\": \"教室灯光偏暗，背景是书桌和小学生书包；小学生男孩趴在桌上，困惑地看着作业，然后转身从书架上拿下一本封面上标注《测试产品》的书，封面闪烁着‘答案？’的文字；男孩突然间笑了。推镜头，小男孩动作特写。字幕：这道题好难，还是看看《测试产品》吧！背景音：轻快的学习音乐逐渐增强。\",\n          \"technique\": \"推镜头，特写男孩动作，背光柔和。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"setup\",\n          \"text\": \"中景，书本特写，精美插图展示多科内容，每页自动弹出语音讲解；镜头切换展示书籍精装封面，配有炫彩容量表。镜头移动，切换课程书页。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"text\": \"多层次镜头展示书本内页学习步骤，手指触碰闪烁内容按钮展示互动效果。中景与近景交替，丰富多彩的学习过程展示。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"climax\",\n          \"text\": \"对比镜头前后学习态度，通过孩子的笑容传递自信，成功展示学习提升运镜。镜头由小孩作业前景，到提升后的欢乐学习姿态。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"other\",\n          \"text\": \"背景音乐轻快，镜头慢慢扫过教室，智能书本在桌面上自动操作，屏幕亮起来映出色彩丰富的内容，闪烁文字让人耳目一新。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        }\n      ]\n    },\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"父母烦恼孩子学习，进入书房惊见神器《测试产品》\"\n        },\n        {\n          \"role\": \"setup\",\n          \"summary\": \"《测试产品》特色功能介绍，重点面向小学生设计\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"场景切换展示书本与课本同步使用的便利\"\n        },\n        {\n          \"role\": \"climax\",\n          \"summary\": \"使用后孩子成绩大幅提升，展示具体科目成绩对比\"\n        },\n        {\n          \"role\": \"other\",\n          \"summary\": \"学生通过《测试产品》展示自信编制家庭作业\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"又头疼孩子的学业？看看我们的《测试产品》！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"这一书完全为小学阶段量身打造，各科覆盖无死角。\"\n        },\n        {\n          \"segment_index\": 2,\n          \"text\": \"手指轻点，便能激活多模式互动学习，方便又高效。\"\n        },\n        {\n          \"segment_index\": 3,\n          \"text\": \"用过之后，我家孩子成绩有了质的飞跃，老师都赞不绝口！\"\n        },\n        {\n          \"segment_index\": 4,\n          \"text\": \"<背景>：智能书本界面流畅高清，让学习充满乐趣。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"text\": \"家庭客厅，柔和的午后阳光透射，父母对孩子作业烦恼。父母一脸无奈地推开书房门，惊讶地看到桌上发光的《测试产品》。父母脸上逐渐露出期待的微笑。镜头推至书房门缝，眼神专注。字幕：又头疼孩子的学业？看看我们的《测试产品》！背景音：轻柔的钢琴音逐渐响起。\",\n          \"technique\": \"中景推镜头，父母人物细节，光线对比明显。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"setup\",\n          \"text\": \"中远景，快速切换书中各学科内容页面，设计华丽、色彩鲜艳，字幕细细标注特色。镜头运用移景，揭示书内丰富内容。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"text\": \"行为特写，展示书本内容与课本同步的便捷性，设定光标热点自动播放独特内容。镜头从推至移揭示互动细节。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"climax\",\n          \"text\": \"通过孩子作业前后成绩的具体表格展示效果，镜头推入成绩单局部特写，亮点突出。成绩单从C到A变化明显。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"other\",\n          \"text\": \"智能书架上放满《测试产品》系列，孩子专注写作业，侧面捕捉动态，悠闲而自信的笑容，阳光充沛，象征前途光明。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        }\n      ]\n    },\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"学生参加考试紧张，老师推荐《测试产品》解题秘籍\"\n        },\n        {\n          \"role\": \"setup\",\n          \"summary\": \"书中功能展示，覆盖教学、练习、复习多环节\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"《测试产品》的多学科练习题库，帮助突破学习瓶颈\"\n        },\n        {\n          \"role\": \"climax\",\n          \"summary\": \"孩子从紧张到自信，考试成功场景闪回\"\n        },\n        {\n          \"role\": \"other\",\n          \"summary\": \"书本外观高科技设计，标配智能感应\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"考试周到了，还在担心题目太难？试试《测试产品》！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"我们的书本集教学、练习、复习功能于一身，专为小学客户设计。\"\n        },\n        {\n          \"segment_index\": 2,\n          \"text\": \"多手动选择模拟题库，学生不断突破自我瓶颈。\"\n        },\n        {\n          \"segment_index\": 3,\n          \"text\": \"有了这本书，原本紧张的孩子现在自信微笑地走出考场。\"\n        },\n        {\n          \"segment_index\": 4,\n          \"text\": \"<背景>：书本采用感应科技，让学习更轻松。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"text\": \"学校考试教室内，阳光微弱，孩子坐在考场桌前额头冒汗。老师微笑走过，轻拍孩子肩膀，递上《测试产品》。孩子露出惊讶笑容，心情放松不少。近景推镜，基本无噪音。字幕：考试周到了，还在担心题目太难？试试《测试产品》！背景音：轻音乐烘托愉悦气氛。\",\n          \"technique\": \"近景推镜，设置场内光线影调，老师与学生互动流畅。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"setup\",\n          \"text\": \"书本页面特写，展示丰富的教学、练习和复习模块；部分场景转换突出了内容活泼，结合学生实际场景体验。特写运镜递进。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"text\": \"书页中遍布操作导览，学生手指滑过，操控书本智能模块展示给观众便捷的操作收获感。固定镜头，运用模拟界面。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"climax\",\n          \"text\": \"镜头聚焦孩子自信微笑的面孔，前一刻紧张考场与考后放松对比表现。特写极拍摄，暗到明之间的光影变化明显。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"other\",\n          \"text\": \"《测试产品》以流线型设计摆放书架上，自带光感应，手指挥动启动书本亮起流光字体，文本辅助字幕流畅展现。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        }\n      ]\n    },\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"孩子难以专注，读书神器《测试产品》来帮忙\"\n        },\n        {\n          \"role\": \"setup\",\n          \"summary\": \"讲解《测试产品》简介及主要功能，适合任何小学年级\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"展示多种形式的互动式学习，内附趣味游戏\"\n        },\n        {\n          \"role\": \"climax\",\n          \"summary\": \"使用《测试产品》后，学生专注力提升显著，实景展示\"\n        },\n        {\n          \"role\": \"other\",\n          \"summary\": \"书本呈现数字化内容，功能界面一目了然\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"孩子做作业总是分心？《测试产品》来解救！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"这本书涵盖了多学科知识，适合小学生的主要学科学习。\"\n        },\n        {\n          \"segment_index\": 2,\n          \"text\": \"提供互动学习模式，配有趣味游戏，孩子爱不释手。\"\n        },\n        {\n          \"segment_index\": 3,\n          \"text\": \"有了这本书，我家孩子现在全神贯注，在学业上表现优异。\"\n        },\n        {\n          \"segment_index\": 4,\n          \"text\": \"<背景>：书本UI设计直观，孩子自主使用系统引导。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"text\": \"清晨阳光下客厅，孩子趴在桌上玩玩具，妈妈关注地看着孩子。妈妈拿出一本《测试产品》，递给分心玩耍的孩子，孩子眼前一亮，立刻投入到书中。推镜头，观察细节。字幕：孩子做作业总是分心？《测试产品》来解救！背景音：轻快的鸟鸣与背景音乐组合。\",\n          \"technique\": \"推镜头，特别处理光线，局部清晰母子互动。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"setup\",\n          \"text\": \"书本展示完全适配小学科目的内容介绍，镜头从书本环绕展示，主打七彩功能及学科应用。移镜强调可操作性。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"text\": \"操作界面特写，手动演示趣味互动模块，场景切换过程中不断激发小朋友兴趣，生活化场景融合。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"climax\",\n          \"text\": \"镜头追踪捕捉到孩子专注学习的表情，与以前无精打采状态形成强烈对比，镜头由远到近切换突出。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"other\",\n          \"text\": \"展示数字化智能界面，书本页面细节，整体设计现代感十足，各种功能模块一目了然。特写镜头与简约字幕相结合。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        }\n      ]\n    },\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"小朋友自己动手解决问题，书本提供支持，家长感动\"\n        },\n        {\n          \"role\": \"setup\",\n          \"summary\": \"介绍书中章节及学科覆盖，解释交互功能\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"突出书中DIY项目和作业指导，增添学习乐趣\"\n        },\n        {\n          \"role\": \"climax\",\n          \"summary\": \"展示孩子独立完成任务，提升自信心，并获得老师夸奖\"\n        },\n        {\n          \"role\": \"other\",\n          \"summary\": \"书本配有个性化学习计划与贴心的用户体验设计\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"当孩子自己解决问题时，家长忍不住为他点赞！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"这本书提供丰富的学科项目，交互界面许多学习乐趣。\"\n        },\n        {\n          \"segment_index\": 2,\n          \"text\": \"它还有各种DIY项目和作业指导，让孩子动手动脑。\"\n        },\n        {\n          \"segment_index\": 3,\n          \"text\": \"孩子因完成了教室任务而获得老师的称赞，他的自信心大增！\"\n        },\n        {\n          \"segment_index\": 4,\n          \"text\": \"<背景>：智能化的书本界面，让学习计划个性化，更加人性化。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"text\": \"温馨的卧室环境，孩子伏案而坐，认真看着《测试产品》上的问题，一页页翻动自如，成功解出一道数学题，家长在一旁微笑着为孩子比赞。推镜头，展现细节动态。字幕：当孩子自己解决问题时，家长忍不住为他点赞！背景音：愉悦的背景乐融入舍曼和家长的笑声。\",\n          \"technique\": \"推镜头，突出动作细节，暖色调实现影片氛围。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"setup\",\n          \"text\": \"书本内容特写，可视化学科概览，家长与学生共同阅读；镜头俯视跟随翻页展示。特写插图与交互元素。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"text\": \"自制项目和手做练习镜头展示，增加家庭作业的乐趣，孩子自主学习，侧面表现细腻。特写局部动作引导。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"climax\",\n          \"text\": \"孩子快乐地展示自己作业，老师在班中表扬，笑脸在孩子脸上荡漾，坚定有力的握起拳头激动场景，中近景捕捉。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        },\n        {\n          \"role\": \"other\",\n          \"text\": \"个性化功能简化孩子使用，清晰UI和生活学习场景结合，以现代书本配以高清智能设计呈现。镜头横移展现整体推荐。\",\n          \"duration_sec\": null,\n          \"jimeng_prompt\": \"\",\n          \"kling_prompt\": \"\"\n        }\n      ]\n    }\n  ]\n}",
+      "metadata": {
+        "input_tokens": 3433,
+        "output_tokens": 3000,
+        "elapsed_ms": 44823.8,
+        "cost_usd": 0.038582
+      }
+    }
+  ],
+  "script_states": [
+    {
+      "status": "pending",
+      "edited_plain_script": null,
+      "edited_video_prompts": {}
+    },
+    {
+      "status": "pending",
+      "edited_plain_script": null,
+      "edited_video_prompts": {}
+    },
+    {
+      "status": "pending",
+      "edited_plain_script": null,
+      "edited_video_prompts": {}
+    },
+    {
+      "status": "pending",
+      "edited_plain_script": null,
+      "edited_video_prompts": {}
+    },
+    {
+      "status": "pending",
+      "edited_plain_script": null,
+      "edited_video_prompts": {}
+    }
+  ]
+}

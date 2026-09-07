@@ -1,0 +1,82 @@
+{
+  "source_type": "text",
+  "structure": [
+    {
+      "start": null,
+      "end": null,
+      "role": "hook",
+      "summary": "用'开头三秒必须留住观众，不然直接划走'制造紧迫感，点明核心痛点，抓住用户注意力"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "setup",
+      "summary": "引出核心方法论：'三步法'，为后续内容做铺垫，建立受众期待"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "buildup",
+      "summary": "逐步拆解三步法内容：第一步找痛点，第二步给方案，第三步喊行动，层层递进"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "cta",
+      "summary": "以'学会了记得点赞关注，我们下期再见'收尾，引导互动并预告下期内容"
+    }
+  ],
+  "dialogue": [
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "开头三秒必须留住观众，不然直接划走。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "今天教你一个三步法："
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "第一步找痛点，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "第二步给方案，"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "第三步喊行动。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": "主讲人",
+      "text": "学会了记得点赞关注，我们下期再见。"
+    }
+  ],
+  "visual": [],
+  "template": {
+    "hook_type": "痛点警告型——以后果威胁（'不然直接划走'）制造紧迫感，强迫用户停留",
+    "pacing_seconds": 20.0,
+    "visual_style": null,
+    "cta_style": "互动引导型——点赞关注 + 下期预告双重留存",
+    "tags": [
+      "短视频方法论",
+      "三步法",
+      "干货口播",
+      "创作技巧",
+      "痛点驱动",
+      "知识分享"
+    ]
+  }
+}

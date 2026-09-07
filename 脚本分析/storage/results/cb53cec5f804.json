@@ -1,0 +1,81 @@
+{
+  "source_type": "text",
+  "structure": [
+    {
+      "start": null,
+      "end": null,
+      "role": "hook",
+      "summary": "用反常识疑问句引发共鸣：'越努力越迷茫'，瞬间抓住目标受众注意力"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "setup",
+      "summary": "点明视频价值主张：'今天教你三个方法'，建立观众预期，降低流失率"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "buildup",
+      "summary": "逐一列举三个方法：明确目标、拆解任务、及时复盘，干货递进呈现"
+    },
+    {
+      "start": null,
+      "end": null,
+      "role": "cta",
+      "summary": "结尾引导互动：'学会了记得点赞关注'，完成转化动作"
+    }
+  ],
+  "dialogue": [
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "你有没有想过，为什么有的人越努力越迷茫？"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "今天教你三个方法。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第一，明确目标；"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第二，拆解任务；"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "第三，及时复盘。"
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "text": "学会了记得点赞关注。"
+    }
+  ],
+  "visual": [],
+  "template": {
+    "hook_type": "反常识疑问句（用'越X越Y'的悖论现象引发共鸣）",
+    "pacing_seconds": 20.0,
+    "visual_style": "纯口播，无场景依赖",
+    "cta_style": "行为引导型（'学会了记得点赞关注'）",
+    "tags": [
+      "干货科普",
+      "个人成长",
+      "效率提升",
+      "listicle三步法",
+      "口播"
+    ]
+  }
+}

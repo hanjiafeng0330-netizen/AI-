@@ -1,0 +1,251 @@
+{
+  "source_type": "video",
+  "structure": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "role": "hook",
+      "summary": "展示产品和用户愉快互动，突出产品魅力和核心功能"
+    },
+    {
+      "start": 4.0,
+      "end": 14.0,
+      "role": "setup",
+      "summary": "详细介绍产品的功能和教学内容示例"
+    },
+    {
+      "start": 14.0,
+      "end": 20.0,
+      "role": "buildup",
+      "summary": "强调产品多学科支持及丰富的学习系统"
+    },
+    {
+      "start": 20.0,
+      "end": 30.0,
+      "role": "climax",
+      "summary": "说明产品使用带来的显著学习效果和适用场景"
+    },
+    {
+      "start": 30.0,
+      "end": 32.0,
+      "role": "other",
+      "summary": "突出产品智能与科技感的环境展示"
+    }
+  ],
+  "dialogue": [
+    {
+      "start": 0.0,
+      "end": 1.8,
+      "speaker": null,
+      "text": "这种给孩子入了这个全能学联系"
+    },
+    {
+      "start": 1.8,
+      "end": 3.0,
+      "speaker": null,
+      "text": "简直就是解放双手"
+    },
+    {
+      "start": 3.0,
+      "end": 4.8,
+      "speaker": null,
+      "text": "它这可不是普通的绘画板"
+    },
+    {
+      "start": 4.8,
+      "end": 6.2,
+      "speaker": null,
+      "text": "里面自带美术启蒙"
+    },
+    {
+      "start": 6.2,
+      "end": 7.8,
+      "speaker": null,
+      "text": "有几百种的视频课程"
+    },
+    {
+      "start": 7.8,
+      "end": 9.8,
+      "speaker": null,
+      "text": "从植物、动物、再到人物、建筑"
+    },
+    {
+      "start": 9.8,
+      "end": 10.6,
+      "speaker": null,
+      "text": "九种分类"
+    },
+    {
+      "start": 10.6,
+      "end": 11.4,
+      "speaker": null,
+      "text": "从零开始"
+    },
+    {
+      "start": 11.4,
+      "end": 12.4,
+      "speaker": null,
+      "text": "一步一步教孩子"
+    },
+    {
+      "start": 12.4,
+      "end": 13.2,
+      "speaker": null,
+      "text": "挖掘机怎么画"
+    },
+    {
+      "start": 13.2,
+      "end": 14.2,
+      "speaker": null,
+      "text": "土拨鼠又怎么画"
+    },
+    {
+      "start": 14.2,
+      "end": 16.8,
+      "speaker": null,
+      "text": "这可比外面花几百块去美术班划算多了"
+    },
+    {
+      "start": 16.8,
+      "end": 20.6,
+      "speaker": null,
+      "text": "它还可以学拼音、学汉字、学古诗、学英语、学儿歌等等"
+    },
+    {
+      "start": 20.6,
+      "end": 22.2,
+      "speaker": null,
+      "text": "一共有12个系统支持"
+    },
+    {
+      "start": 22.2,
+      "end": 23.0,
+      "speaker": null,
+      "text": "都是孩子喜欢的"
+    },
+    {
+      "start": 23.0,
+      "end": 24.4,
+      "speaker": null,
+      "text": "和日后课本里要学的知识"
+    },
+    {
+      "start": 24.4,
+      "end": 26.2,
+      "speaker": null,
+      "text": "我儿子现在已经会背小学的古诗了"
+    },
+    {
+      "start": 26.2,
+      "end": 28.0,
+      "speaker": null,
+      "text": "你不管拿它当个画画启蒙"
+    },
+    {
+      "start": 28.0,
+      "end": 30.2,
+      "speaker": null,
+      "text": "或者是早教早练都特别好用"
+    }
+  ],
+  "visual": [
+    {
+      "timestamp": 0.0,
+      "description": "中景镜头，女性坐室内地板上拿彩色包装盒，表情愉悦，画面居中且明亮，带有白底黑边大字幕及小胖老师品牌水印",
+      "technique": "构图居中/中景/品牌水印/字幕样式"
+    },
+    {
+      "timestamp": 2.0,
+      "description": "产品细节俯视微近景，手指操作彩色按键和小屏幕动画，字幕突出功能解放双手",
+      "technique": "特写/俯视镜头/字幕重点提醒"
+    },
+    {
+      "timestamp": 4.0,
+      "description": "中近景拍摄绘画屏幕彩色涂鸦动画鲸鱼，背景有装饰玩具书架，字幕黄色红边带闪电形状突出",
+      "technique": "中近景/色彩亮丽/字幕特效"
+    },
+    {
+      "timestamp": 6.0,
+      "description": "继续展示绘画动作细节，字幕强化主题无变化",
+      "technique": "动作细节/字幕持续"
+    },
+    {
+      "timestamp": 8.0,
+      "description": "车内场景特写电子绘画板及手部操作，强调随时随地使用的便利性",
+      "technique": "场景切换/稳定镜头/产品突出"
+    },
+    {
+      "timestamp": 10.0,
+      "description": "室内桌面手绘挖掘机动画，中景带字幕强调教学步骤",
+      "technique": "中景/教学内容强调"
+    },
+    {
+      "timestamp": 12.0,
+      "description": "特写绘画板屏幕动画卡通形象，电子笔绘制，背景卡通色彩丰富，字幕黑底白字",
+      "technique": "特写/色彩丰富/字幕样式变化"
+    },
+    {
+      "timestamp": 14.0,
+      "description": "车内镜头聚焦产品界面和交互操作，背景虚化无字幕",
+      "technique": "聚焦界面/背景虚化/无字幕"
+    },
+    {
+      "timestamp": 16.0,
+      "description": "中景侧拍手持写字板，屏幕显示古诗学习图标，车内环境",
+      "technique": "中景/侧拍/生活化场景"
+    },
+    {
+      "timestamp": 18.0,
+      "description": "俯视中景镜头，拼音教学内容，手部操作，车内环境清晰",
+      "technique": "俯视镜头/细节突出"
+    },
+    {
+      "timestamp": 20.0,
+      "description": "写字板近景特写，显示数学题，屏幕明亮，字幕突出记忆效果",
+      "technique": "特写/字幕显著"
+    },
+    {
+      "timestamp": 22.0,
+      "description": "中景写字板放桌面支架，书写英文单词，背景虚化，字幕强调专注力和绘画能力",
+      "technique": "中景/虚化背景/字幕突出"
+    },
+    {
+      "timestamp": 24.0,
+      "description": "相似画面轻微靠近，继续展示写字动作，字幕持续",
+      "technique": "细节推进/字幕持续"
+    },
+    {
+      "timestamp": 26.0,
+      "description": "中景画面手绘彩色卡通喷发火山，人物背影局部入画，字幕突出孩子高兴",
+      "technique": "中景/动作特写/字幕显著"
+    },
+    {
+      "timestamp": 28.0,
+      "description": "写字板近景，母女插画屏幕，黄色橙色卡通字体动态飞入，字幕显示儿歌教学",
+      "technique": "动画字幕/特写镜头"
+    },
+    {
+      "timestamp": 30.0,
+      "description": "写字板近景，百科知识图文介绍，明亮清晰，字幕突出内容丰富性",
+      "technique": "内容丰富/字幕突出"
+    },
+    {
+      "timestamp": 32.0,
+      "description": "中景略俯视角度，车内部方向盘及中控大屏显示3D车图，电子设备有彩色按键和屏幕饼干图案，画面冷静清晰，科技感强",
+      "technique": "俯视角度/静态镜头/科技氛围"
+    }
+  ],
+  "template": {
+    "hook_type": "情绪共鸣+产品展示",
+    "pacing_seconds": 2.0,
+    "visual_style": "色彩明亮，字幕突出，生活化场景结合产品细节特写",
+    "cta_style": "软性讲述，突出产品强大功能和易用性",
+    "tags": [
+      "教育科技",
+      "亲子学习",
+      "多功能产品",
+      "绘画教学",
+      "智能学习"
+    ]
+  }
+}

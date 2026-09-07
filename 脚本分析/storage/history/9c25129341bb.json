@@ -1,0 +1,92 @@
+{
+  "id": "9c25129341bb",
+  "created_at": 1788523073.2628942,
+  "source_type": "text",
+  "title": "大家好，今天分享一个学习方法。第一步制定计划，第二步专注执行，第三步及时复习。",
+  "video_filename": null,
+  "result": {
+    "source_type": "text",
+    "structure": [
+      {
+        "start": null,
+        "end": null,
+        "role": "hook",
+        "summary": "开场打招呼并引入主题，分享一个学习方法。"
+      },
+      {
+        "start": null,
+        "end": null,
+        "role": "buildup",
+        "summary": "介绍学习方法的三个步骤：制定计划、专注执行、及时复习。"
+      }
+    ],
+    "dialogue": [
+      {
+        "start": null,
+        "end": null,
+        "speaker": null,
+        "text": "大家好，"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": null,
+        "text": "今天分享一个学习方法。"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": null,
+        "text": "第一步制定计划，"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": null,
+        "text": "第二步专注执行，"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": null,
+        "text": "第三步及时复习。"
+      }
+    ],
+    "visual": [],
+    "template": {
+      "hook_type": "问候+引入主题",
+      "pacing_seconds": 10.0,
+      "visual_style": null,
+      "cta_style": "无明确CTA",
+      "tags": [
+        "学习方法",
+        "步骤讲解",
+        "教学"
+      ]
+    }
+  },
+  "prompt_trace": [
+    {
+      "label": "文字脚本结构化分析",
+      "system_prompt": "你是短视频/口播稿脚本分析专家。给定一段文字脚本，请完成：\n1. 结构拆解：按 hook / setup / buildup / climax / cta / other 划分片段并概括每段内容（纯文字输入没有时间信息，start/end 可省略）。\n2. 文案台词提取：把脚本拆成自然的分句列表。\n3. 可复用模板：抽象出 hook 类型、节奏、结尾 CTA 风格、标签等，供后续生成同类脚本的提示词使用。\n视觉元素分析（visual）留空数组，因为输入是纯文字。\n必须调用 submit_analysis 工具提交结果，source_type 固定为 \"text\"。",
+      "user_prompt": "请对下面变量中提供的脚本文本执行结构化分析：\n1. 结构拆解（hook/setup/buildup/climax/cta/other）\n2. 文案台词分句\n3. 可复用模板抽象\n必须调用 submit_analysis 工具提交结果。",
+      "variables": {
+        "脚本文本": "大家好，今天分享一个学习方法。第一步制定计划，第二步专注执行，第三步及时复习。",
+        "字数": 39
+      },
+      "final_prompt": "请对下面变量中提供的脚本文本执行结构化分析：\n1. 结构拆解（hook/setup/buildup/climax/cta/other）\n2. 文案台词分句\n3. 可复用模板抽象\n必须调用 submit_analysis 工具提交结果。\n\n### 脚本文本\n大家好，今天分享一个学习方法。第一步制定计划，第二步专注执行，第三步及时复习。\n\n### 字数\n39",
+      "model_params": {
+        "model": "gpt-4.1-mini",
+        "temperature": null,
+        "max_tokens": 8192
+      },
+      "response": "{\n  \"source_type\": \"text\",\n  \"structure\": [\n    {\n      \"role\": \"hook\",\n      \"summary\": \"开场打招呼并引入主题，分享一个学习方法。\"\n    },\n    {\n      \"role\": \"buildup\",\n      \"summary\": \"介绍学习方法的三个步骤：制定计划、专注执行、及时复习。\"\n    }\n  ],\n  \"dialogue\": [\n    {\n      \"text\": \"大家好，\"\n    },\n    {\n      \"text\": \"今天分享一个学习方法。\"\n    },\n    {\n      \"text\": \"第一步制定计划，\"\n    },\n    {\n      \"text\": \"第二步专注执行，\"\n    },\n    {\n      \"text\": \"第三步及时复习。\"\n    }\n  ],\n  \"visual\": [],\n  \"template\": {\n    \"hook_type\": \"问候+引入主题\",\n    \"pacing_seconds\": 10,\n    \"cta_style\": \"无明确CTA\",\n    \"tags\": [\n      \"学习方法\",\n      \"步骤讲解\",\n      \"教学\"\n    ]\n  }\n}",
+      "metadata": {
+        "input_tokens": 527,
+        "output_tokens": 231,
+        "elapsed_ms": 8984.7,
+        "cost_usd": null
+      }
+    }
+  ]
+}

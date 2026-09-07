@@ -1,6 +1,4 @@
 .env
-storage/results/
-storage/history/
 __pycache__/
-*.pyc
+*.py[cod]
 .DS_Store

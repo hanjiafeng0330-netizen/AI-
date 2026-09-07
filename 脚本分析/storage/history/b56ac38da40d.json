@@ -1,0 +1,88 @@
+{
+  "id": "b56ac38da40d",
+  "created_at": 1787909167.588615,
+  "source_type": "text",
+  "title": "历史记录测试文本，验证是否能正确落盘并在历史列表中展示。",
+  "video_filename": null,
+  "result": {
+    "source_type": "text",
+    "structure": [
+      {
+        "start": null,
+        "end": null,
+        "role": "hook",
+        "summary": "以\"历史记录测试\"为开篇，吸引目标用户关注测试与数据落盘的话题"
+      },
+      {
+        "start": null,
+        "end": null,
+        "role": "setup",
+        "summary": "说明核心目的：验证文本内容是否能正确落盘"
+      },
+      {
+        "start": null,
+        "end": null,
+        "role": "climax",
+        "summary": "提出关键验证点：落盘后能否在历史列表中正确展示"
+      }
+    ],
+    "dialogue": [
+      {
+        "start": null,
+        "end": null,
+        "speaker": "旁白",
+        "text": "历史记录测试文本，"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": "旁白",
+        "text": "验证是否能正确落盘"
+      },
+      {
+        "start": null,
+        "end": null,
+        "speaker": "旁白",
+        "text": "并在历史列表中展示。"
+      }
+    ],
+    "visual": [],
+    "template": {
+      "hook_type": "功能说明型开篇（直接点明测试目的）",
+      "pacing_seconds": 5.0,
+      "visual_style": "纯文字口播，无视觉设计要求",
+      "cta_style": "无明确CTA（纯功能验证文本，无引导行动）",
+      "tags": [
+        "测试文本",
+        "数据落盘",
+        "历史记录",
+        "功能验证",
+        "列表展示"
+      ]
+    }
+  },
+  "prompt_trace": [
+    {
+      "label": "文字脚本结构化分析",
+      "system_prompt": "你是短视频/口播稿脚本分析专家。给定一段文字脚本，请完成：\n1. 结构拆解：按 hook / setup / buildup / climax / cta / other 划分片段并概括每段内容（纯文字输入没有时间信息，start/end 可省略）。\n2. 文案台词提取：把脚本拆成自然的分句列表。\n3. 可复用模板：抽象出 hook 类型、节奏、结尾 CTA 风格、标签等，供后续生成同类脚本的提示词使用。\n视觉元素分析（visual）留空数组，因为输入是纯文字。\n必须调用 submit_analysis 工具提交结果，source_type 固定为 \"text\"。",
+      "user_prompt": "请对下面变量中提供的脚本文本执行结构化分析：\n1. 结构拆解（hook/setup/buildup/climax/cta/other）\n2. 文案台词分句\n3. 可复用模板抽象\n必须调用 submit_analysis 工具提交结果。",
+      "variables": {
+        "脚本文本": "历史记录测试文本，验证是否能正确落盘并在历史列表中展示。",
+        "字数": 28
+      },
+      "final_prompt": "请对下面变量中提供的脚本文本执行结构化分析：\n1. 结构拆解（hook/setup/buildup/climax/cta/other）\n2. 文案台词分句\n3. 可复用模板抽象\n必须调用 submit_analysis 工具提交结果。\n\n### 脚本文本\n历史记录测试文本，验证是否能正确落盘并在历史列表中展示。\n\n### 字数\n28",
+      "model_params": {
+        "model": "claude-sonnet-4-6",
+        "temperature": null,
+        "max_tokens": 8192
+      },
+      "response": "{\n  \"source_type\": \"text\",\n  \"structure\": [\n    {\n      \"role\": \"hook\",\n      \"summary\": \"以\\\"历史记录测试\\\"为开篇，吸引目标用户关注测试与数据落盘的话题\"\n    },\n    {\n      \"role\": \"setup\",\n      \"summary\": \"说明核心目的：验证文本内容是否能正确落盘\"\n    },\n    {\n      \"role\": \"climax\",\n      \"summary\": \"提出关键验证点：落盘后能否在历史列表中正确展示\"\n    }\n  ],\n  \"dialogue\": [\n    {\n      \"speaker\": \"旁白\",\n      \"text\": \"历史记录测试文本，\"\n    },\n    {\n      \"speaker\": \"旁白\",\n      \"text\": \"验证是否能正确落盘\"\n    },\n    {\n      \"speaker\": \"旁白\",\n      \"text\": \"并在历史列表中展示。\"\n    }\n  ],\n  \"visual\": [],\n  \"template\": {\n    \"hook_type\": \"功能说明型开篇（直接点明测试目的）\",\n    \"pacing_seconds\": 5,\n    \"cta_style\": \"无明确CTA（纯功能验证文本，无引导行动）\",\n    \"tags\": [\n      \"测试文本\",\n      \"数据落盘\",\n      \"历史记录\",\n      \"功能验证\",\n      \"列表展示\"\n    ],\n    \"visual_style\": \"纯文字口播，无视觉设计要求\"\n  }\n}",
+      "metadata": {
+        "input_tokens": 1526,
+        "output_tokens": 478,
+        "elapsed_ms": 9307.0,
+        "cost_usd": 0.011748
+      }
+    }
+  ]
+}

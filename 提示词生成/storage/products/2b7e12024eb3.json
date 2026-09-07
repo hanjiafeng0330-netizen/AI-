@@ -1,0 +1,20 @@
+{
+  "id": "2b7e12024eb3",
+  "name": "预习新初一",
+  "price": "19.8元",
+  "original_price": "39.8元",
+  "selling_points": [
+    "语文数学英语三科预习",
+    "每天45分钟",
+    "视频讲解+练习巩固"
+  ],
+  "pain_points": [
+    "初一三科变七科，知识又难又多",
+    "暑假不知道怎么规划预习"
+  ],
+  "target_audience": "家有9月升初一孩子的家长",
+  "authenticity_notes": "红白封皮，26年新版",
+  "extra_notes": "六月后不再印刷",
+  "created_at": 1787911192.863255,
+  "grade": "初中"
+}

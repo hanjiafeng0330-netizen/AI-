@@ -1,0 +1,152 @@
+{
+  "id": "7d3ed46be59b",
+  "created_at": 1788745776.755132,
+  "title": "测试产品 × 大家好，今天分享一个学习方法。第一步制定计划，第二步专注执行，第三步及时复习。",
+  "source_script_id": "9c25129341bb",
+  "product_id": "eea4529dcac5",
+  "result": {
+    "id": "7d3ed46be59b",
+    "scripts": [
+      {
+        "structure": [
+          {
+            "role": "hook",
+            "summary": "开场，通过对教育现状的疑问引出主题，强调一种有效的学习策略。",
+            "duration_sec": null
+          },
+          {
+            "role": "buildup",
+            "summary": "对比传统学习方法与新的策略，步骤包括观察现象、深入理解、探索应用。",
+            "duration_sec": null
+          }
+        ],
+        "dialogue": [
+          {
+            "segment_index": 0,
+            "speaker": null,
+            "text": "有多少次，你觉得孩子学习没效果？今天，一种全新的学习策略可能会改变这一切！"
+          },
+          {
+            "segment_index": 1,
+            "speaker": null,
+            "text": "传统方法死记硬背，但最新的策略主张观察现象，深入理解，以及探索应用。"
+          }
+        ],
+        "video_prompts": [
+          {
+            "role": "hook",
+            "duration_sec": null,
+            "jimeng_prompt": "明亮的教室里，母亲和孩子坐在桌旁，孩子神情沮丧，母亲疑惑地看向孩子：'有多少次，你觉得学习没效果？今天，一种全新的学习策略可能会改变这一切！' 母亲微笑，镜头从近景拉到中景，显示母亲轻拍孩子肩膀。",
+            "kling_prompt": "家居环境，白天，温暖的光线；母亲金色头发，穿着休闲家居服，孩子穿着蓝色校服；安慰与鼓励的神情，母亲微笑着鼓励孩子；固定镜头，然后缓慢拉远。"
+          }
+        ],
+        "variant_title": "",
+        "variant_style": ""
+      }
+    ],
+    "plain_scripts": [
+      "【】\n\n【开场钩子（前贴）】\n开场，通过对教育现状的疑问引出主题，强调一种有效的学习策略。\n有多少次，你觉得孩子学习没效果？今天，一种全新的学习策略可能会改变这一切！\n\n【铺垫】\n对比传统学习方法与新的策略，步骤包括观察现象、深入理解、探索应用。\n传统方法死记硬背，但最新的策略主张观察现象，深入理解，以及探索应用。"
+    ],
+    "prompt_trace": [
+      {
+        "label": "脚本生成",
+        "system_prompt": "你是短视频带货脚本创作专家，尤其擅长图书类产品的口播/情景剧带货脚本，同时具备丰富的 AI 视频生成提示词（即梦、可灵）写作经验。\n\n你会收到两类输入：\n1. 「参考脚本分析」：一条已验证有效（爆款/测试过）的脚本的结构化分析结果，包含 structure（hook/setup/buildup/climax/cta 分段与概括）、dialogue（原台词）、template（可复用套路：hook 类型、节奏、视觉风格、CTA 风格、标签）。\n2. 「产品资料」：这次要推广的新产品信息（书名、价格、卖点、痛点、目标人群、正版特征等）。\n\n## 任务\n一次性产出 1 条内容不同、创意方向不同的新脚本变体（scripts 数组，必须正好 1 条）。1 条之间要有实质差异，不能只是同一个脚本换几个词。可以从下面方向中挑不同的来演绎，也欢迎你自己设计更新颖、更有传播力的形式：\n- 情景剧冲突型（亲子对话、朋友吐槽等）\n- 悬念提问型（先抛反常识观点/问题，制造好奇）\n- 数据/对比冲击型（用数字、前后对比制造紧迫感）\n- 第三方证言/街访型（模拟真实用户/家长现身说法）\n- 痛点共鸣型（直击目标人群的具体焦虑场景）\n- 反转/打脸型（先立一个错误认知，再打破它）\n- 沉浸式测评/开箱型（模拟主播实拍开箱讲解）\n\n每条脚本仍要复刻参考脚本 template 里的节奏/段落骨架/CTA 风格，只是创意表达、具体场景、台词不同；不要照抄参考脚本的原台词和具体人物设定。\n\n## 每条脚本的结构要求\n- structure：按 hook/setup/buildup/climax/cta（或 other）划分，片段数量与参考脚本大致一致\n- dialogue：新台词，只保留最关键的句子即可，每句标注所属 segment_index\n- video_prompts：与 structure 一一对应（数量、顺序、role 完全一致）\n\n## 关于 video_prompts 的详细程度（重要，写作时严格区分）\n- **hook 分段**（视频最前几秒的悬念/引流片段，业内也叫\"前贴\"）：jimeng_prompt 和 kling_prompt 必须写得足够完整、具体，能直接复制进 AI 视频工具生成可用画面，必须覆盖：\n  1. 场景：地点、时间、环境背景、光线氛围\n  2. 人物：外貌特征、衣着、所处位置\n  3. 动作：从头到尾的具体动作序列\n  4. 状态/情绪：表情与情绪状态\n  5. 台词：人物在这个镜头里说的具体台词内容（落到具体文字，不能只写\"说话\"）\n  6. 镜头：运镜方式（推/拉/摇/移/固定/跟随）、景别（远/中/近/特写）\n  7. 字幕/音效建议（如有）\n  用自然语句/分号连接表达即可，不需要加编号标题。\n- **其他分段**（setup/buildup/climax/cta 等）：保持简洁（每条 80-150 字），只需给出核心画面内容 + 镜头运镜 + 关键道具/字幕，不必像 hook 那样逐项展开，避免输出过长。\n\n必须调用 submit_scripts 工具，一次性提交全部 1 条脚本。\n如果输入变量中提供了「历史反馈参考」，请学习其中的话术风格与结构偏好，但不要照抄其中的具体文字。",
+        "user_prompt": "请基于下面变量中提供的「参考脚本分析」和「产品资料」，一次性生成 1 条创意方向不同的新带货脚本（结构骨架复刻参考脚本节奏，内容/打法各异，欢迎新颖大胆的形式）。\nhook 分段的 video_prompts 必须完整覆盖场景/人物外貌衣着/动作/情绪状态/具体台词/镜头运镜，可以直接复制去 AI 视频工具生成画面；其他分段保持简洁。\n必须调用 submit_scripts 工具提交全部 1 条。",
+        "variables": {
+          "参考脚本分析": {
+            "source_type": "text",
+            "structure": [
+              {
+                "start": null,
+                "end": null,
+                "role": "hook",
+                "summary": "开场打招呼并引入主题，分享一个学习方法。"
+              },
+              {
+                "start": null,
+                "end": null,
+                "role": "buildup",
+                "summary": "介绍学习方法的三个步骤：制定计划、专注执行、及时复习。"
+              }
+            ],
+            "dialogue": [
+              {
+                "start": null,
+                "end": null,
+                "speaker": null,
+                "text": "大家好，"
+              },
+              {
+                "start": null,
+                "end": null,
+                "speaker": null,
+                "text": "今天分享一个学习方法。"
+              },
+              {
+                "start": null,
+                "end": null,
+                "speaker": null,
+                "text": "第一步制定计划，"
+              },
+              {
+                "start": null,
+                "end": null,
+                "speaker": null,
+                "text": "第二步专注执行，"
+              },
+              {
+                "start": null,
+                "end": null,
+                "speaker": null,
+                "text": "第三步及时复习。"
+              }
+            ],
+            "visual": [],
+            "template": {
+              "hook_type": "问候+引入主题",
+              "pacing_seconds": 10.0,
+              "visual_style": null,
+              "cta_style": "无明确CTA",
+              "tags": [
+                "学习方法",
+                "步骤讲解",
+                "教学"
+              ]
+            }
+          },
+          "产品资料": {
+            "name": "测试产品",
+            "grade": "小学",
+            "price": "99",
+            "original_price": null,
+            "selling_points": [],
+            "pain_points": [],
+            "target_audience": null,
+            "authenticity_notes": null,
+            "extra_notes": null
+          }
+        },
+        "final_prompt": "请基于下面变量中提供的「参考脚本分析」和「产品资料」，一次性生成 1 条创意方向不同的新带货脚本（结构骨架复刻参考脚本节奏，内容/打法各异，欢迎新颖大胆的形式）。\nhook 分段的 video_prompts 必须完整覆盖场景/人物外貌衣着/动作/情绪状态/具体台词/镜头运镜，可以直接复制去 AI 视频工具生成画面；其他分段保持简洁。\n必须调用 submit_scripts 工具提交全部 1 条。\n\n### 参考脚本分析\n{\n  \"source_type\": \"text\",\n  \"structure\": [\n    {\n      \"start\": null,\n      \"end\": null,\n      \"role\": \"hook\",\n      \"summary\": \"开场打招呼并引入主题，分享一个学习方法。\"\n    },\n    {\n      \"start\": null,\n      \"end\": null,\n      \"role\": \"buildup\",\n      \"summary\": \"介绍学习方法的三个步骤：制定计划、专注执行、及时复习。\"\n    }\n  ],\n  \"dialogue\": [\n    {\n      \"start\": null,\n      \"end\": null,\n      \"speaker\": null,\n      \"text\": \"大家好，\"\n    },\n    {\n      \"start\": null,\n      \"end\": null,\n      \"speaker\": null,\n      \"text\": \"今天分享一个学习方法。\"\n    },\n    {\n      \"start\": null,\n      \"end\": null,\n      \"speaker\": null,\n      \"text\": \"第一步制定计划，\"\n    },\n    {\n      \"start\": null,\n      \"end\": null,\n      \"speaker\": null,\n      \"text\": \"第二步专注执行，\"\n    },\n    {\n      \"start\": null,\n      \"end\": null,\n      \"speaker\": null,\n      \"text\": \"第三步及时复习。\"\n    }\n  ],\n  \"visual\": [],\n  \"template\": {\n    \"hook_type\": \"问候+引入主题\",\n    \"pacing_seconds\": 10.0,\n    \"visual_style\": null,\n    \"cta_style\": \"无明确CTA\",\n    \"tags\": [\n      \"学习方法\",\n      \"步骤讲解\",\n      \"教学\"\n    ]\n  }\n}\n\n### 产品资料\n{\n  \"name\": \"测试产品\",\n  \"grade\": \"小学\",\n  \"price\": \"99\",\n  \"original_price\": null,\n  \"selling_points\": [],\n  \"pain_points\": [],\n  \"target_audience\": null,\n  \"authenticity_notes\": null,\n  \"extra_notes\": null\n}",
+        "model_params": {
+          "model": "gpt-4o",
+          "temperature": null,
+          "max_tokens": 16000
+        },
+        "response": "{\n  \"scripts\": [\n    {\n      \"structure\": [\n        {\n          \"role\": \"hook\",\n          \"summary\": \"开场，通过对教育现状的疑问引出主题，强调一种有效的学习策略。\"\n        },\n        {\n          \"role\": \"buildup\",\n          \"summary\": \"对比传统学习方法与新的策略，步骤包括观察现象、深入理解、探索应用。\"\n        }\n      ],\n      \"dialogue\": [\n        {\n          \"segment_index\": 0,\n          \"text\": \"有多少次，你觉得孩子学习没效果？今天，一种全新的学习策略可能会改变这一切！\"\n        },\n        {\n          \"segment_index\": 1,\n          \"text\": \"传统方法死记硬背，但最新的策略主张观察现象，深入理解，以及探索应用。\"\n        }\n      ],\n      \"video_prompts\": [\n        {\n          \"role\": \"hook\",\n          \"jimeng_prompt\": \"明亮的教室里，母亲和孩子坐在桌旁，孩子神情沮丧，母亲疑惑地看向孩子：'有多少次，你觉得学习没效果？今天，一种全新的学习策略可能会改变这一切！' 母亲微笑，镜头从近景拉到中景，显示母亲轻拍孩子肩膀。\",\n          \"kling_prompt\": \"家居环境，白天，温暖的光线；母亲金色头发，穿着休闲家居服，孩子穿着蓝色校服；安慰与鼓励的神情，母亲微笑着鼓励孩子；固定镜头，然后缓慢拉远。\",\n          \"other_parts\": [\n            {\n              \"role\": \"buildup\",\n              \"content\": \"对比画面：孩子在学校死记硬背，在家长指导下探索世界，实验桌上写着“观察现象”、“深入理解”、“探索应用”；运镜为固定镜头，文字配有简短说明。\"\n            }\n          ],\n          \"duration_sec\": null\n        }\n      ]\n    }\n  ]\n}",
+        "metadata": {
+          "input_tokens": 1534,
+          "output_tokens": 363,
+          "elapsed_ms": 20108.7,
+          "cost_usd": 0.007465
+        }
+      }
+    ],
+    "script_states": [
+      {
+        "status": "pending",
+        "edited_plain_script": null,
+        "edited_video_prompts": {}
+      }
+    ]
+  }
+}
