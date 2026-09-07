@@ -112,6 +112,32 @@ async function loadBatches() {
   container.querySelectorAll('[data-cancel]').forEach(button => button.addEventListener('click', async () => { await api(`api/batches/${button.dataset.batch}/items/${button.dataset.cancel}`, {method:'DELETE'}); await loadBatches(); }));
   container.querySelectorAll('[data-retry]').forEach(button => button.addEventListener('click', async () => { await api(`api/batches/${button.dataset.batch}/items/${button.dataset.retry}/retry-download`, {method:'POST'}); await loadBatches(); }));
 }
+
+function formatFileSize(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+async function loadVideoLibrary() {
+  const videos = await api('api/videos');
+  const container = $('#video-library');
+  if (!videos.length) {
+    container.innerHTML = '<p class="hint">暂无本地视频文件。</p>';
+    return;
+  }
+  container.innerHTML = `<div class="video-grid">${videos.map(video => `
+    <article class="video-card">
+      <video controls src="/video/media/videos/${encodeURIComponent(video.filename)}"></video>
+      <div class="video-info">
+        <p class="video-name">${escapeHtml(video.filename)}</p>
+        <p class="video-meta">${formatFileSize(video.size_bytes)} · ${new Date(video.created_at * 1000).toLocaleString()}</p>
+        <a href="/video/media/videos/${encodeURIComponent(video.filename)}" download class="secondary">下载视频</a>
+      </div>
+    </article>
+  `).join('')}</div>`;
+}
+
 $('#source-select').addEventListener('change', selectSource); $('#variant-select').addEventListener('change', selectVariant); $('#mode').addEventListener('change', syncMode); $('#model').addEventListener('change', syncModelCapabilities); $('#quantity').addEventListener('change', updateSelection); $('#submit').addEventListener('click', submitBatch); $('#refresh-batches').addEventListener('click', loadBatches);
 $('#open-settings').addEventListener('click', async () => { $('#settings-panel').classList.remove('hidden'); try { await loadSettingsStatus(); } catch { $('#key-status').textContent = '无法读取配置状态。'; } }); $('#close-settings').addEventListener('click', closeSettings); $('#cancel-settings').addEventListener('click', closeSettings); $('#settings-form').addEventListener('submit', saveSettings);
-Promise.all([loadSources(), loadBatches(), loadSettingsStatus(), loadModels()]).catch(error => { $('#form-error').textContent = error.message; }); setInterval(() => loadBatches().catch(() => {}), 5000);
+Promise.all([loadSources(), loadBatches(), loadSettingsStatus(), loadModels(), loadVideoLibrary()]).catch(error => { $('#form-error').textContent = error.message; }); setInterval(() => loadBatches().catch(() => {}), 5000);

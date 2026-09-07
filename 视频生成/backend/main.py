@@ -145,4 +145,18 @@ def api_video(filename: str):
     return FileResponse(path, media_type="video/mp4", filename=filename)
 
 
+@app.get("/api/videos")
+def api_list_videos():
+    """列出所有已下载的本地视频文件。"""
+    videos = []
+    for path in sorted(VIDEOS_DIR.glob("*.mp4"), key=lambda p: p.stat().st_mtime, reverse=True):
+        stat = path.stat()
+        videos.append({
+            "filename": path.name,
+            "size_bytes": stat.st_size,
+            "created_at": stat.st_ctime,
+        })
+    return videos
+
+
 app.mount("/", StaticFiles(directory=PROJECT_ROOT / "static", html=True), name="static")
