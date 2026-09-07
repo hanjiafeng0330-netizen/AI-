@@ -138,6 +138,17 @@ async function loadVideoLibrary() {
   `).join('')}</div>`;
 }
 
+// Tab switching
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`panel-${btn.dataset.tab}`).classList.add('active');
+    if (btn.dataset.tab === 'library') loadVideoLibrary();
+  });
+});
+
 $('#source-select').addEventListener('change', selectSource); $('#variant-select').addEventListener('change', selectVariant); $('#mode').addEventListener('change', syncMode); $('#model').addEventListener('change', syncModelCapabilities); $('#quantity').addEventListener('change', updateSelection); $('#submit').addEventListener('click', submitBatch); $('#refresh-batches').addEventListener('click', loadBatches);
 $('#open-settings').addEventListener('click', async () => { $('#settings-panel').classList.remove('hidden'); try { await loadSettingsStatus(); } catch { $('#key-status').textContent = '无法读取配置状态。'; } }); $('#close-settings').addEventListener('click', closeSettings); $('#cancel-settings').addEventListener('click', closeSettings); $('#settings-form').addEventListener('submit', saveSettings);
-Promise.all([loadSources(), loadBatches(), loadSettingsStatus(), loadModels(), loadVideoLibrary()]).catch(error => { $('#form-error').textContent = error.message; }); setInterval(() => loadBatches().catch(() => {}), 5000);
+Promise.all([loadSources(), loadBatches(), loadSettingsStatus(), loadModels()]).catch(error => { $('#form-error').textContent = error.message; }); setInterval(() => loadBatches().catch(() => {}), 5000);
